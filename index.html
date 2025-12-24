@@ -17,6 +17,10 @@ layout: default
     margin: 0 auto;
   }
 
+  h1, h2, h3, h4, h5, h6, p, li, a, span, div {
+    color: #fff !important;
+  }
+
   ul {
     list-style: none;
     padding: 0;
@@ -28,17 +32,26 @@ layout: default
 
   ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #fff !important;
     font-weight: 500;
   }
 
   header .site-header h2,
-  header .site-header p {
+  header .site-header p,
+  .site-footer {
     color: #fff !important;
+    display: none; /* ← 隱藏整個 footer 區塊（GitHub、Twitter icon那區） */
   }
 </style>
 
 <h1 style="font-weight: normal; font-size: 26px; margin-bottom: 20px;">Crab Archive｜甲殻類観察録</h1>
+
+<p style="margin-bottom: 40px;">
+  I don't teach.<br>
+  I don't interact.<br>
+  I observe. I record. I stay quiet.
+</p>
+
 <p style="margin-bottom: 60px;">
   教えない。<br>
   関わらない。<br>
