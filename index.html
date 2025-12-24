@@ -2,28 +2,60 @@
 layout: default
 ---
 
-<div class="home">
+<style>
+  body {
+    background-image: url('/images/bg.jpg'); /* 👈 如果你上傳的圖不是叫這個，記得改這裡 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
 
-  <h1>Crab Archive｜甲殻類観察録 🦀</h1>
+  .overlay {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 720px;
+    margin: 80px auto;
+    padding: 60px 40px;
+    border-radius: 6px;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    color: #333;
+  }
 
-  <p>This is not a place for education, interaction, or sharing.  
-  It is a silent record of behavior and characteristics I observe in crustaceans.</p>
+  .overlay ul {
+    list-style: none;
+    padding: 0;
+  }
 
-  <p>教育でも交流でもない。  
-  これは甲殻類の行動や特性を観察し、ただ淡々と記録していく個人的な場。</p>
+  .overlay ul li {
+    margin: 10px 0;
+  }
 
-  <div style="margin: 40px 0; text-align: left;">
-    <a href="/story" style="padding: 8px 18px; background: #222; color: #eee; text-decoration: none; margin-right: 12px; border-radius: 4px;">故事</a>
-    <a href="/species" style="padding: 8px 18px; background: #222; color: #eee; text-decoration: none; margin-right: 12px; border-radius: 4px;">種類</a>
-    <a href="/ecology" style="padding: 8px 18px; background: #222; color: #eee; text-decoration: none; margin-right: 12px; border-radius: 4px;">生態</a>
-    <a href="/data" style="padding: 8px 18px; background: #222; color: #eee; text-decoration: none; border-radius: 4px;">資料</a>
-  </div>
+  .overlay a {
+    text-decoration: none;
+    color: #444;
+  }
+</style>
 
-  <hr>
+<div class="overlay">
+  <h1 style="font-weight: normal; font-size: 26px; margin-bottom: 20px;">Crab Archive｜甲殻類観察録</h1>
 
-  <p style="color:#888;">
-    No comments. No discussions. No intention to teach.  
-    Just me, watching quietly.
+  <p style="margin-bottom: 40px;">
+    I don't teach.<br>
+    I don't interact.<br>
+    I observe. I record. I stay quiet.
   </p>
 
+  <p style="margin-bottom: 60px;">
+    教えない。<br>
+    関わらない。<br>
+    ただ観察し、記録する。
+  </p>
+
+  <ul>
+    <li><a href="/story">▸ 故事｜観察したこと</a></li>
+    <li><a href="/species">▸ 種類｜分類と個体</a></li>
+    <li><a href="/ecology">▸ 生態｜環境と行動</a></li>
+    <li><a href="/data">▸ 資料｜数値、記録、連結</a></li>
+  </ul>
 </div>
