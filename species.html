@@ -10,7 +10,6 @@
     html, body {
       margin: 0;
       padding: 0;
-      /* 這裡一樣會去抓你的背景圖，確保網路上有這張圖就好 */
       background-image: url('/images/bg.jpg');
       background-size: cover;
       background-position: center;
@@ -33,21 +32,24 @@
       margin-bottom: 60px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       padding-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
-    /* 返回首頁按鈕 */
     .back-link {
       display: inline-block;
       margin-bottom: 40px;
-      color: #aaa;
+      color: #ddd;
       text-decoration: none;
       font-size: 16px;
+      background-color: rgba(0,0,0,0.5);
+      padding: 5px 15px;
+      border-radius: 20px;
     }
     .back-link:hover {
       color: #fff;
+      background-color: rgba(0,0,0,0.8);
     }
 
-    /* 列表樣式 */
     .species-list {
       list-style: none;
       padding: 0;
@@ -57,19 +59,24 @@
       display: block;
       text-decoration: none;
       color: #fff;
-      padding: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
       margin-bottom: 20px;
-      transition: background 0.3s;
+      transition: all 0.3s;
     }
 
     .species-item:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background-color: rgba(50, 50, 50, 0.8);
+      transform: translateY(-5px);
+      border-color: #fff;
     }
 
     .species-item h2 {
       font-size: 28px;
       margin: 0 0 10px 0;
+      color: #fff;
     }
     
     .species-item h2 span {
@@ -94,18 +101,18 @@
     <div class="species-list">
       
       <a href="#" class="species-item">
-        <h2>Tuerkayana magnum <span>大型圓軸蟹</span></h2>
-        <p>陸生 / 地蟹科 / 台灣東部與恆春半島常見</p>
+        <h2>Tuerkayana magnum <span>オオエンジクガニ</span></h2>
+        <p>陸生 / オカガニ科 / 台湾東部および恒春半島に生息</p>
       </a>
 
       <a href="#" class="species-item">
-        <h2>Tachypleus tridentatus <span>三棘鱟</span></h2>
-        <p>海洋 / 鱟科 / 活化石，主要分佈於金門與澎湖沿海</p>
+        <h2>Tachypleus tridentatus <span>カブトガニ</span></h2>
+        <p>海洋 / カブトガニ科 / 生きた化石、主に金門島と澎湖諸島の沿岸に分布</p>
       </a>
 
       <a href="#" class="species-item">
-        <h2>Cancer pagurus <span>黃道蟹</span></h2>
-        <p>海洋 / 黃道蟹科 / 食用蟹，也就是麵包蟹</p>
+        <h2>Cancer pagurus <span>ヨーロッパイチョウガニ</span></h2>
+        <p>海洋 / イチョウガニ科 / 食用ガニ（別名：パンガニ）</p>
       </a>
 
     </div>
