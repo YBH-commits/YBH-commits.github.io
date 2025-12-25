@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>種類｜Crab Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      /* 這裡一樣會去抓你的背景圖，確保網路上有這張圖就好 */
+      background-image: url('/images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #fff;
+      font-size: 20px;
+      line-height: 2;
+    }
+
+    .container {
+      padding: 100px 80px;
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: normal;
+      margin-bottom: 60px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 20px;
+    }
+
+    /* 返回首頁按鈕 */
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .back-link:hover {
+      color: #fff;
+    }
+
+    /* 列表樣式 */
+    .species-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .species-item {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 20px;
+      transition: background 0.3s;
+    }
+
+    .species-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .species-item h2 {
+      font-size: 28px;
+      margin: 0 0 10px 0;
+    }
+    
+    .species-item h2 span {
+      font-size: 18px;
+      color: #ddd;
+      margin-left: 10px;
+    }
+
+    .species-item p {
+      margin: 0;
+      font-size: 18px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Return to Home</a>
+
+    <h1>種類｜Species List</h1>
+
+    <div class="species-list">
+      
+      <a href="#" class="species-item">
+        <h2>Tuerkayana magnum <span>大型圓軸蟹</span></h2>
+        <p>陸生 / 地蟹科 / 台灣東部與恆春半島常見</p>
+      </a>
+
+      <a href="#" class="species-item">
+        <h2>Tachypleus tridentatus <span>三棘鱟</span></h2>
+        <p>海洋 / 鱟科 / 活化石，主要分佈於金門與澎湖沿海</p>
+      </a>
+
+      <a href="#" class="species-item">
+        <h2>Cancer pagurus <span>黃道蟹</span></h2>
+        <p>海洋 / 黃道蟹科 / 食用蟹，也就是麵包蟹</p>
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>
