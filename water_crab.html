@@ -5,27 +5,350 @@
   <title>澤蟹病理｜Crab Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     html, body {
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       background-image: url('/images/bg.jpg');
-      background-size: cover; background-position: center; background-attachment: fixed;
-      font-family: 'Noto Sans JP', sans-serif; color: #fff; line-height: 1.8;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #fff;
+      font-size: 18px;
+      line-height: 2; /* 增加行距，讓文章看起來更像正式報告 */
     }
-    .container { padding: 80px 20px; max-width: 900px; margin: 0 auto; }
-    .content-box { background-color: rgba(0, 0, 0, 0.85); padding: 60px; border-radius: 15px; }
-    .back-link { color: #ddd; text-decoration: none; border: 1px solid #ddd; padding: 5px 15px; border-radius: 20px; }
+
+    .container {
+      padding: 80px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .content-box {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 80px 60px; /* 增加內距，讓版面更開闊 */
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0,0,0,1);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 50px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 15px;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 10px 25px;
+      border-radius: 30px;
+      transition: all 0.3s;
+    }
+    .back-link:hover {
+      background-color: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    h1 {
+      font-size: 36px;
+      border-bottom: 3px solid #fff;
+      padding-bottom: 30px;
+      margin-bottom: 50px;
+      line-height: 1.5;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #81d4fa;
+      margin-top: 80px;
+      margin-bottom: 30px;
+      border-left: 8px solid #81d4fa;
+      padding-left: 20px;
+      background: linear-gradient(90deg, rgba(129, 212, 250, 0.05), transparent);
+    }
+
+    h3 {
+      font-size: 24px;
+      color: #b3e5fc;
+      margin-top: 50px;
+      margin-bottom: 25px;
+      font-weight: 700;
+      border-bottom: 1px dashed rgba(255,255,255,0.2);
+      padding-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      text-align: justify;
+      font-weight: 300;
+    }
+
+    .abstract {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 60px;
+      font-style: italic;
+      color: #e0e0e0;
+      line-height: 2.2;
+    }
+
+    ul {
+      margin-bottom: 30px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+    strong {
+      color: #ffcc80;
+      font-weight: 500;
+    }
+
+    /* 表格樣式優化，容納更多文字 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 50px 0;
+      font-size: 16px;
+      background-color: rgba(30, 30, 30, 0.8);
+    }
+    th, td {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 18px;
+      text-align: left;
+      vertical-align: top;
+      word-break: break-all;
+    }
+    th {
+      background-color: rgba(129, 212, 250, 0.15);
+      color: #fff;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
   </style>
 </head>
 <body>
+
   <div class="container">
     <div class="content-box">
       <a href="pathology.html" class="back-link">← Back to Menu</a>
-      <br><br>
-      <h1>サワガニ（澤蟹）の病理と臨床</h1>
-      <p>Data Coming Soon...</p>
+
+      <h1>サワガニ（Geothelphusa）および淡水甲殻類の疾病学：<br>病理メカニズム、臨床診断、薬理治療および予防管理に関する包括的研究報告</h1>
+
+      <div class="abstract">
+        豊かな生物多様性の地図において、サワガニ属（<em>Geothelphusa</em>）は最も広く分布する淡水ガニとして、その生態学的健康状態は渓流環境の純度を反映するだけでなく、水産養殖学および獣医病理学的研究の重要な対象でもある。サワガニは進化の過程で淡水環境に高度に適応しているため、その生理構造と浸透圧調節メカニズムは環境変化に対して極めて敏感である。野生生息地における保全研究であれ、人工飼育環境下での生理学的モニタリングであれ、疾病症状の識別、病理学的要因の探求、および臨床治療プロトコルの策定は、厳格な科学的基盤の上に構築される必要がある。本報告では、サワガニに一般的に見られる肢体行動異常、感染性疾患、環境中毒、脱皮障害、およびその治療期間について詳細に論述する。
+      </div>
+
+      <h2>サワガニの肢体行動異常に関する病理生理学的解析</h2>
+      <p>臨床観察において、サワガニが示す「動作緩慢」や「行動不全」は単一の疾患ではなく、全身性の生理機能崩壊の外部的表徴である。これらの症状は通常、呼吸器系、神経系、および運動筋肉組織の協調不全に関与している。</p>
+
+      <h3>呼吸抑制による運動失調メカニズム</h3>
+      <p>サワガニのエラは、ガス交換とイオンバランスを行うための中核器官である。エラが損傷すると、血液（血リンパ）中の溶存酸素濃度が急速に低下し、組織低酸素症を引き起こす。臨床上最も顕著な例は黒鰓病（こくさいびょう）であり、これは細菌感染によって引き起こされ、鰓糸組織の壊死と大量のメラニン色素の蓄積をもたらす。鰓糸が暗灰色から黒色に変化すると、有効呼吸面積が大幅に縮小し、病蟹は低酸素を代償するために「溜息」現象、すなわち水面際で頻繁に鼻上げ呼吸を行うようになる。低酸素によりエネルギー代謝（ATP産生）が阻害されるため、病蟹の付属肢筋肉の反応は遅くなり、逃避反射の消失、岸辺に滞留して入水しないなどの行動を示す。このような呼吸障害によって引き起こされる運動能力の喪失は、個体がすでに生理的衰弱段階に入っていることを予示していることが多い。</p>
+
+      <h3>環境毒性の神経筋肉への影響</h3>
+      <p>サワガニは水中の化学成分、特に窒素廃棄物に対して極めて敏感である。非イオン化アンモニア（NH3）は極めて強い脂溶性を持ち、細胞膜を容易に透過して神経組織に侵入する。水質が悪化したり、ろ過システムが機能しなくなったりすると、アンモニア中毒はカニに急性のストレスを引き起こす。初期には暴走、痙攣、または転倒が見られることがあるが、その後すぐに長期的な呆然自失状態や麻痺状態に移行する。この行動上の「緩慢さ」は、実際には神経伝達が妨害された結果である。さらに、塩素系消毒剤や重金属などの初期の清掃薬剤の残留は、肝膵臓の壊死を引き起こし、全身の新陳代謝機能に影響を与え、カニが刺激を受けた際に正常な歩行姿勢を維持できなくなる原因となる。</p>
+
+      <h2>感染性疾患の診断特徴と発病メカニズム</h2>
+      <p>淡水ガニ類の感染性疾患は主に細菌、真菌、ウイルス、寄生虫によって引き起こされ、その発病過程は環境温度、水質、およびカニの身体的損傷と密接に関連している。</p>
+
+      <h3>細菌性感染症</h3>
+      <p>細菌性疾患は、養殖および飼育下のサワガニにおける高い死亡率の主因である。以下に一般的な細菌性疾患の臨床特徴の対照表を示す。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>疾患名</th>
+            <th>主要病原体</th>
+            <th>典型的症状</th>
+            <th>内部病変</th>
+            <th>行動異常</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>黒鰓病</strong></td>
+            <td>ビブリオ属、エロモナス属</td>
+            <td>鰓糸が黒変、欠損</td>
+            <td>呼吸器官の壊死</td>
+            <td>呼吸困難、水草や岸辺への付着</td>
+          </tr>
+          <tr>
+            <td><strong>腸炎病</strong></td>
+            <td>腸内細菌</td>
+            <td>体色が白化、腹部弛緩</td>
+            <td>腸管発赤、空腹、胃潰瘍</td>
+            <td>食欲減退、行動遅緩、黄色液の吐出</td>
+          </tr>
+          <tr>
+            <td><strong>水腫病</strong></td>
+            <td>創傷感染細菌</td>
+            <td>腹部および背甲下が腫脹</td>
+            <td>組織液貯留、透明状</td>
+            <td>動作緩慢、入水しない、衰弱死</td>
+          </tr>
+          <tr>
+            <td><strong>シェルロット (褐斑病)</strong></td>
+            <td>キチン質分解菌</td>
+            <td>甲羅に褐色/黒色の潰瘍</td>
+            <td>潰瘍が甲羅を貫通し組織侵入</td>
+            <td>活力低下、脱皮周期の乱れ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>腸炎病の病理過程において、病蟹の腸管は細菌毒素の刺激により炎症反応を起こし、消化酵素の分泌が阻害される。解剖すると腸管内が空であることが確認でき、これは病蟹が発病後期に極度の衰弱と体色変化を示す理由を説明している。一方、水腫病は腹部の受傷後に多発し、細菌が血リンパ系に侵入して浸透圧の不均衡を引き起こし、水分が組織間隙に大量に流入することで、肉眼でも確認できる透明な腫れを形成する。</p>
+
+      <h3>真菌性感染：水カビ病</h3>
+      <p>水カビ病（Saprolegniasis）は、低温期や環境ストレス下におけるサワガニの主要な脅威である。その特徴は、病蟹の体表、付属肢、または傷口に長さ2〜3cmに達する灰白色の綿状菌糸が生えることである。菌糸は単に表面に付着するだけでなく、筋肉の深部まで浸透し、組織間隙に蔓延する。この侵害はカニに大量の粘液分泌を促し、体質の衰弱、食欲不振を引き起こし、最終的には脱皮不全や多臓器不全により死に至る。</p>
+
+      <h3>寄生虫病：フクロムシと繊毛虫</h3>
+      <p>フクロムシ（Sacculina）は高度に特殊化した寄生性甲殻類である。フクロムシの幼生がサワガニの体内に侵入すると、その吸根はカニの各器官に広がり、栄養を奪取し宿主の生殖腺の発達を抑制する。重度に寄生されたカニは肉質に異臭（通称：南京虫ガニ）が生じ、個体の活力は健康な個体よりも著しく低くなる。環境塩分濃度が0.1%を超える淡水域では、フクロムシ病はより拡散しやすい。繊毛虫はエラに寄生することが多く、直接栄養を吸収することはないが、過度に繁殖すると呼吸表面を閉塞し、間接的に肢体動作の遅延を引き起こす。</p>
+
+      <h2>薬理治療プロトコルと臨床投薬期間</h2>
+      <p>サワガニの疾病治療においては、頻繁な薬剤変更や用量不足による病原体の耐性獲得を避けるため、用量基準と完全な治療コースを厳守する必要がある。</p>
+
+      <h3>薬剤使用基準と用量表</h3>
+      <p>下表は、異なる病原体に対する臨床常用薬剤とその具体的な使用パラメータをまとめたものである。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>薬剤分類</th>
+            <th>薬剤名</th>
+            <th>使用方法</th>
+            <th>推奨濃度/用量</th>
+            <th>治療期間 (1クール)</th>
+            <th>適応症</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>消毒剤</strong></td>
+            <td>ジブロモヒダントイン</td>
+            <td>全池散布</td>
+            <td>0.3mg/L</td>
+            <td>7日間</td>
+            <td>シェルロット、細菌感染消毒</td>
+          </tr>
+          <tr>
+            <td><strong>消毒剤</strong></td>
+            <td>トリクロロイソシアヌル酸</td>
+            <td>浸漬洗浄</td>
+            <td>0.5mg/L</td>
+            <td>1-2回、間隔1-2日</td>
+            <td>水カビ、真菌予防</td>
+          </tr>
+          <tr>
+            <td><strong>消毒剤</strong></td>
+            <td>さらし粉 (漂白粉)</td>
+            <td>全池散布</td>
+            <td>1−1.5mg/L</td>
+            <td>1回 (環境清掃と併用)</td>
+            <td>細菌性疾患予防</td>
+          </tr>
+          <tr>
+            <td><strong>抗生物質</strong></td>
+            <td>オキシテトラサイクリン</td>
+            <td>内服 (餌に混合)</td>
+            <td>500mg/kg</td>
+            <td>連続14日間</td>
+            <td>褐斑病、全身性細菌感染</td>
+          </tr>
+          <tr>
+            <td><strong>殺虫剤</strong></td>
+            <td>硫酸亜鉛</td>
+            <td>浸漬洗浄</td>
+            <td>200mg/L</td>
+            <td>10-20分</td>
+            <td>フクロムシ病</td>
+          </tr>
+          <tr>
+            <td><strong>漢方製剤</strong></td>
+            <td>複合漢方製剤（傲八黄など）</td>
+            <td>内服/散布</td>
+            <td>ボトル1本(250ml) / 3-5畝</td>
+            <td>3-5日間</td>
+            <td>腸炎、鰓腐れ、敗血症補助</td>
+          </tr>
+          <tr>
+            <td><strong>補助薬剤</strong></td>
+            <td>ヨードチンキ (5%)</td>
+            <td>塗布</td>
+            <td>患部に直接塗布</td>
+            <td>薬浴後に使用</td>
+            <td>傷口潰瘍、水カビ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>治療期間の科学的根拠</h3>
+      <p>「期間」はサワガニ治療において重要な意義を持つ。例えば、細菌性疾患に対しては通常、7日間を完全な1クールとして推奨される。オキシテトラサイクリン（土黴素）などの抗生物質を使用する場合は、体内深層組織の病原体を完全に排除するために14日間まで延長する必要がある。腸炎や赤脚病に対しては、経口抗菌薬餌を通常5〜7日間連続投与する必要がある。治療期間が短縮されると、生存した細菌が再発しやすく、より強い病原性を持つ可能性が高い。投薬期間中は同時に水質を調整し、例えば定期的に消石灰を散布してpH値を7.5〜8.5の間に安定させることで、薬効の発揮を助け、カニの体表の傷の修復を促進すべきである。</p>
+
+      <h3>塩水（食塩）浴の応用</h3>
+      <p>家庭飼育者にとって、塩水浴は低毒性で操作が容易な初期処置法である。</p>
+      <ul>
+        <li><strong>放流前の消毒：</strong>3%の食塩水を使用して浸漬浴を行う。時間はカニの大きさと活力に応じて決定する。</li>
+        <li><strong>水カビ病治療：</strong>3%〜5%の高濃度塩水を使用して5分間浸漬し、その後患部にヨードチンキを塗布する。この方法は表層の菌糸を効果的に殺滅し、局所の血液循環を促進することができる。</li>
+      </ul>
+
+      <h2>脱皮生理障害の予防と栄養介入</h2>
+      <p>脱皮はサワガニのライフサイクルにおいて最も脆弱な時期であり、「行動不全」の症状が最も集中的に発生する段階でもある。脱皮の失敗はしばしば死を伴う。</p>
+
+      <h3>脱皮死亡原因の詳細分析</h3>
+      <p>サワガニの脱皮過程における死亡は、主に体力の消耗とミネラルの不均衡に起因する。</p>
+      <ul>
+        <li><strong>薬剤残留ストレス：</strong>初期の清掃薬剤が完全に分解されていない場合、残留毒素が肝膵臓を損傷する。肝膵臓は脱皮ホルモンを合成する中核器官であり、機能が損なわれると脱皮プロセスが中止され、病蟹はしばしば旧殻と新殻の境界で死亡する。</li>
+        <li><strong>環境低酸素：</strong>脱皮には大量のエネルギーが必要であり、水中の溶存酸素が3.0ppmを下回る（健康基準は5.0mg/L以上）と、カニは呼吸不全により脱皮中に死亡する。</li>
+        <li><strong>カルシウム・リン備蓄不足：</strong>カニは脱皮前に旧殻からカルシウムを回収し、胃石（Gastrolith）に貯蔵する。栄養摂取が単一で胃石の貯蔵量が不足すると、新殻が硬化せず、ソフトシェルクラブとなり最終的に衰弱する。</li>
+      </ul>
+
+      <h3>カルシウム補給と硬殻戦略</h3>
+      <p>脱皮死亡率を下げるためには、環境と飼料の両面から栄養強化を行う必要がある。</p>
+      <ul>
+        <li><strong>水体カルシウム補給：</strong>塩化カルシウム、乳酸カルシウム、または専用の「甲殻硬化剤」を散布する。乳酸カルシウムは溶解度が高く、エラから吸収されやすいため、新殻の硬化時間を著しく短縮することができる。</li>
+        <li><strong>内服栄養：</strong>飼料にビタミンC、リン酸二水素カリウム、タウリンを添加し、筋肉の収縮力と神経興奮性を高め、カニが旧殻からスムーズに抜け出せるようにする。</li>
+        <li><strong>環境管理：</strong>脱皮のピーク時には水位を上げ、水温を一定に保ち、大量の水換えや人為的な干渉を厳禁とする。</li>
+      </ul>
+
+      <h2>環境管理とバイオセキュリティ防護</h2>
+      <p>完璧な予防管理は、サワガニの発病を防ぎ、肢体行動の問題を解決するための最も安価で効果的な手段である。</p>
+
+      <h3>水質理化学基準と制御</h3>
+      <p>サワガニの健全な成長は、安定した物理化学的環境に依存している。</p>
+      <ul>
+        <li><strong>pH値管理：</strong>最適pHは7.5〜8.5である。pHが低下して酸性になると、キチン質の石灰化が抑制され、甲羅が脆弱になる。</li>
+        <li><strong>アンモニア態窒素の制御：</strong>高効率の生物学的ろ過システムを通じて、アンモニア態窒素を極めて低いレベルに維持する必要がある。水に魚臭さや泡の蓄積が見られる場合は、直ちに水を交換し、給餌を減らすべきである。</li>
+        <li><strong>溶存酸素の維持：</strong>溶存酸素量は5mg/L以上を維持しなければならず、この値を下回るとストレス反応が誘発され、免疫力が低下する。</li>
+      </ul>
+
+      <h3>飼育環境のレイアウト</h3>
+      <ul>
+        <li><strong>区分原則：</strong>給餌エリアと脱皮エリアを厳格に分ける。脱皮エリアには、個体が隠れられるように大量の水草（池面積の1/3以上）を配置し、脱皮時に同類から捕食されるのを防ぐ。</li>
+        <li><strong>外敵防除：</strong>ミズカマキリ、鳥類、虫やネズミの侵入に注意する。これらの外敵は幼蟹を直接捕食するだけでなく、病原体の媒介者でもある。</li>
+        <li><strong>清掃と検疫：</strong>毎年冬季には池の水を完全に抜き、底泥を日光消毒し、消石灰を使用して汚泥に隠れている細菌や寄生虫の卵を殺滅する。</li>
+      </ul>
+
+      <h2>臨床獣医リソースと緊急処置の提言</h2>
+      <p>サワガニに重篤な疾病の兆候が見られる場合、民間療法のみに頼ることはリスクが高い。近年、特殊ペットや水族動物に対する医療リソースは徐々に成熟しつつある。</p>
+
+      <h3>臨床診断フロー</h3>
+      <p>飼い主や養殖者は、体系的な観察日誌を作成すべきである：</p>
+      <ul>
+        <li><strong>早朝観察：</strong>個体が岸辺に滞留しているか、行動が呆然としていないかを確認する。</li>
+        <li><strong>給餌モニタリング：</strong>摂食量が突然低下していないか観察する。これは慢性疾患の爆発の前兆である。</li>
+        <li><strong>体表検査：</strong>定期的にカニを抽出し、鰓糸の色や甲羅に褐色の潰瘍がないか検査を行う。</li>
+      </ul>
+
     </div>
   </div>
+
 </body>
 </html>
