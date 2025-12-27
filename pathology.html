@@ -2,10 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>病理｜Crab Archive</title>
+  <title>病理選択｜Crab Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     html, body {
       margin: 0;
@@ -17,31 +17,69 @@
       background-repeat: no-repeat;
       font-family: 'Noto Sans JP', sans-serif;
       color: #fff;
-      font-size: 18px;
-      line-height: 1.8;
+      font-size: 20px;
+      line-height: 2;
     }
 
     .container {
-      padding: 80px 20px;
-      max-width: 900px;
+      padding: 100px 20px;
+      max-width: 800px;
       margin: 0 auto;
+      text-align: center;
     }
 
-    .content-box {
-      background-color: rgba(0, 0, 0, 0.85);
-      padding: 60px;
+    h1 {
+      font-size: 40px;
+      margin-bottom: 60px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    }
+
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .menu-item {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.7); /* 半透明黑底 */
+      border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-item:hover {
+      background-color: rgba(50, 50, 50, 0.9);
+      transform: translateY(-5px); /* 浮起來 */
+      border-color: #81d4fa;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .menu-item h2 {
+      font-size: 32px;
+      margin: 0 0 10px 0;
+      color: #81d4fa;
+    }
+
+    .menu-item p {
+      margin: 0;
+      color: #ccc;
+      font-size: 18px;
     }
 
     .back-link {
       display: inline-block;
-      margin-bottom: 40px;
+      margin-top: 60px;
       color: #ddd;
       text-decoration: none;
       font-size: 16px;
-      background-color: rgba(255,255,255,0.1);
-      padding: 8px 20px;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px 25px;
       border-radius: 20px;
       transition: all 0.3s;
     }
@@ -49,493 +87,30 @@
       background-color: #fff;
       color: #000;
     }
-
-    h1 {
-      font-size: 36px;
-      border-bottom: 2px solid #fff;
-      padding-bottom: 20px;
-      margin-bottom: 40px;
-      line-height: 1.4;
-    }
-
-    h2 {
-      font-size: 28px;
-      color: #81d4fa;
-      margin-top: 60px;
-      margin-bottom: 30px;
-      border-left: 5px solid #81d4fa;
-      padding-left: 15px;
-    }
-
-    h3 {
-      font-size: 24px;
-      color: #b3e5fc;
-      margin-top: 40px;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-
-    h4 {
-      font-size: 20px;
-      margin-top: 30px;
-      color: #e1f5fe;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-
-    p {
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .abstract {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-left: 4px solid #fff;
-      margin-bottom: 50px;
-      font-style: italic;
-      color: #eee;
-    }
-
-    ul {
-      margin-bottom: 20px;
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 15px;
-    }
-    strong {
-      color: #ffcc80;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 40px 0;
-      font-size: 16px;
-    }
-    th, td {
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 15px;
-      text-align: left;
-      vertical-align: top;
-    }
-    th {
-      background-color: rgba(255, 255, 255, 0.2);
-      color: #fff;
-      font-weight: bold;
-    }
-    tr:nth-child(even) {
-      background-color: rgba(255, 255, 255, 0.05);
-    }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <div class="content-box">
-      <a href="index.html" class="back-link">← Return to Home</a>
+    <h1>病理レポート選択</h1>
+    <p style="margin-bottom: 50px;">閲覧したいカテゴリを選択してください。<br>Please select a category.</p>
 
-      <h1>オカガニ類の病理学と臨床管理</h1>
-      <p style="font-size: 20px; margin-bottom: 40px; color: #ccc;">動作緩慢、運動障害および包括的治療戦略に関する詳細研究報告要旨</p>
-
-      <div class="abstract">
-        <strong>要旨</strong><br>
-        本報告書は、陸生および半陸生十脚目甲殻類（通称オカガニ類、オカヤドカリ科 <em>Coenobita</em>、オカガニ科 <em>Cardisoma</em>、<em>Gecarcinidae</em> およびバンパイアクラブ属 <em>Geosesarma</em> 等を含む）が呈する動作緩慢（bradykinesia）、運動失調（ataxia）、麻痺（paralysis）および関連する病理学的徴候について、その病因学的分析と臨床治療プロトコルを詳述することを目的とする。オカガニ類の運動能力障害は、単一の筋骨格系の問題ではなく、神経系、血リンパ循環系、代謝機能、あるいは環境毒性ストレスの複合的な反映であることが多い。本報告では、「カニ嗜眠病」（Lethargic Crab Disease, LCD）、ウイルス性神経壊死、細菌性甲羅腐敗病（Shell Rot）、微胞子虫感染症、重金属および殺虫剤中毒、栄養性筋変性（白筋症）などの発症メカニズムを詳細に解析する。同時に、隔離検疫、薬浴療法（塩浴、メチレンブルー、ポビドンヨード）、壊死組織除去（デブリードマン）、抗生物質投与、および栄養リハビリテーション（エナジーミックス）を含む、エビデンスに基づいた治療フレームワークを提供し、専門飼育者、獣医師、および関連研究者にとって価値ある臨床ガイドラインとなることを目指す。
-      </div>
-
-      <h2>1. 序論：オカガニの運動生理学と病理学的メカニズムの基礎</h2>
-      <p>オカガニの運動生理学的メカニズムは、環境に対して極めて敏感で精密なシステムである。完全に水生の近縁種とは異なり、オカガニは重力環境下で体重を支える必要があり、これは骨格筋システムと血リンパ（hemolymph）の静水圧調節に対して極めて高い要求を課す。オカガニが「動作緩慢」や「運動不全」を示している場合、我々は実際には複雑な生理学的崩壊の末期的症状を観察していることになる。</p>
-
-      <h3>1.1 神経筋制御と血リンパ動態</h3>
-      <p>甲殻類の運動は、外骨格の内壁（apodemes：内突起）に付着した横紋筋に依存している。これらの筋肉の収縮は神経系によって正確に制御されているが、動作の効率と力の伝達は血リンパの膨圧（turgor pressure）に強く依存している。感染症（例：<em>Hematodinium</em> 感染）により凝固メカニズムに異常が生じた場合、あるいは脱水により体液量が不足した場合、神経シグナルが正常であっても、筋肉は肢を動かすための十分な機械的力を生成できない。したがって、臨床上の「脱力」はしばしば循環器系の不全の兆候である。</p>
-
-      <h3>1.2 運動障害の臨床分類</h3>
-      <p>病因を探る前に、「運動障害」を臨床症状学的に分類することが不可欠である。これは鑑別診断において極めて重要となる：</p>
-      <ul>
-        <li><strong>嗜眠（Lethargy）：</strong> 外的刺激に対する反応が鈍化し、活動量が著しく低下するが、基本的な反射は保持されている状態。</li>
-        <li><strong>運動失調（Ataxia）：</strong> 肢の運動が協調せず、歩行がふらつき、身体のバランスを維持できず、転倒後に自力で起き上がれない状態。</li>
-        <li><strong>麻痺（Paralysis）：</strong>
-          <ul>
-            <li><strong>弛緩性麻痺（Flaccid paralysis）：</strong> 筋緊張が消失し、肢がぬいぐる目のようにダラリとする。細菌性敗血症や熱中症で一般的である。</li>
-            <li><strong>強直性麻痺（Tetany/Spastic paralysis）：</strong> 筋肉が持続的に痙攣性収縮を起こし、肢が硬直・痙攣する。神経毒中毒や低カルシウム血症で一般的である。</li>
-          </ul>
-        </li>
-        <li><strong>自切（Autotomy）：</strong> 極度のストレス、損傷、または感染に直面した際の防御メカニズムとしての自発的な肢の切断。麻痺ではないが、運動機能に深刻な障害をもたらす。</li>
-      </ul>
-
-      <h2>2. 感染性病因：ウイルス、細菌、真菌による神経筋系の破壊</h2>
-      <p>感染症は、オカガニの集団死および運動機能喪失の主要因である。病原体は神経組織を直接侵襲するか、あるいは代謝産物や組織壊死を通じて間接的に運動能力に影響を与える。</p>
-
-      <h3>2.1 ウイルス性病原体と神経系損傷</h3>
-      <p>甲殻類におけるウイルス感染はしばしば劇症化し、顕著な神経症状を伴う。</p>
-
-      <h4>2.1.1 レオ様ウイルス（Reo-like Virus, RLV）</h4>
-      <p>ワタリガニ（<em>Callinectes sapidus</em>）および関連種の研究において、RLVは破壊的な神経性ウイルスであることが示されている。</p>
-      <ul>
-        <li><strong>病理メカニズム：</strong> ウイルスは主に血球細胞（hemocytes）および神経膠細胞（グリア細胞）に感染する。血球細胞は免疫防御と凝固を担うため、その破壊は全身性の不全を招く。神経系の感染は運動シグナルを直接遮断する。</li>
-        <li><strong>臨床的特徴：</strong> 感染個体は極度の嗜眠を示し、捕獲や干渉に対して逃避反応を示さない（ストレス死しやすい）。最も典型的な神経症状には、振戦（tremors）と進行性の麻痺が含まれる。一部の症例では視神経への感染により失明に至る。実験では、ウイルス注射後わずか3日で死に至ることが示されており、病状の進行が極めて速い。</li>
-        <li><strong>感染経路：</strong> オカガニ集団内で一般的な共食い（cannibalism）を通じて主に伝播する。</li>
-      </ul>
-
-      <h4>2.1.2 ホワイトスポット症候群ウイルス（WSSV）および伝染性皮下造血器壊死症ウイルス（IHHNV）</h4>
-      <p>WSSVはエビ養殖において最も知られているが、ノコギリガザミ（<em>Scylla spp.</em>）や多くのオカガニ類を含む十脚目甲殻類にも感染する。</p>
-      <ul>
-        <li><strong>症状：</strong> 甲羅上の白いカルシウム沈着斑点に加え、重度の嗜眠、拒食、および運動停止が見られる。ウイルスは外胚葉および中胚葉組織（筋肉と神経を含む）を破壊し、代謝崩壊と麻痺を引き起こす。</li>
-      </ul>
-
-      <h3>2.2 真菌性疾患：カニ嗜眠病（Lethargic Crab Disease, LCD）</h3>
-      <p>これはオカガニ（特にマングローブ・ランドクラブ <em>Ucides cordatus</em>）に関して最も詳細に研究されている疾患の一つであり、その名称が主な臨床症状を直接表している。</p>
-
-      <h4>2.2.1 病原体と疫学</h4>
-      <p>LCDの病原体は黒色酵母 <em>Exophiala cancerae</em>（不完全菌の一種）であることが確認されている。この病気はブラジル沿岸でオカガニの大規模な大量死を引き起こした。</p>
-
-      <h4>2.2.2 神経病理学的メカニズム</h4>
-      <p>なぜ真菌感染がカニを「遅く」させるのか？研究によると、これは単なる体力低下ではなく、物理的な神経圧迫によるものである。</p>
-      <ul>
-        <li><strong>神経線維の圧迫：</strong> 組織病理学的検査では、<em>Exophiala</em> の酵母様細胞が結合組織や神経系の周囲に大量に蓄積し、神経線維を物理的に圧迫して神経インパルスの伝導を遮断することが示されている。これが、病蟹が運動失調（ataxia）や歩行不安定を示す理由である。</li>
-        <li><strong>血リンパ循環の阻害：</strong> 真菌塊は血リンパ洞（hemal sinuses）や血管を閉塞し、血液循環を阻害する。筋肉組織は酸素欠乏と栄養供給不足により正常な収縮機能を維持できなくなり、肢の脱力に至る。</li>
-        <li><strong>臨床経過：</strong> 初期症状には軽微な振戦と動作緩慢が含まれ、その後重度の運動失調（肢の協調運動不能）へと進行し、最終的には強直状態（tetany）となり死に至る。感染したカニの腹部は顕著な硬直を示す。</li>
-      </ul>
-
-      <h3>2.3 細菌感染：甲羅腐敗と敗血症</h3>
-      <p>細菌は日和見病原体であり、環境悪化や外傷時に侵入することが多い。</p>
-
-      <h4>2.3.1 細菌性甲殻病（Shell Disease / Shell Rot）</h4>
-      <p>通称「シェルロット（甲羅腐敗病）」と呼ばれ、キチン質分解能を持つ細菌（<em>Aquimarina spp.</em>, <em>Vibrio spp.</em>, <em>Aeromonas spp.</em> など）によって引き起こされる。運動への影響は以下の通り：</p>
-      <ul>
-        <li><strong>機械的障害：</strong> 重度の潰瘍が関節部に達すると、関節癒着や可動域制限を引き起こす。歩脚の先端（指節）で発生した場合、カニは疼痛や構造的損傷によりその肢の使用を避け、跛行（びっこ）を示す。</li>
-        <li><strong>脱皮不全（Dysecdysis）：</strong> 潰瘍部分で新旧の外骨格が癒着し、脱皮時に肢をスムーズに引き抜けず、四肢欠損や死に至る。</li>
-        <li><strong>二次性敗血症：</strong> 細菌が外骨格のバリアを貫通して体腔内に侵入すると、全身性敗血症を引き起こし、全身の弛緩性脱力を招く。</li>
-      </ul>
-
-      <h4>2.3.2 敗血症と「脚弱」症候群</h4>
-      <p>全身性細菌感染（土壌や水中に遍在する <em>Acinetobacter</em> 属など）は、代謝性アシドーシスと多臓器不全を引き起こす。</p>
-      <ul>
-        <li><strong>臨床表現：</strong> 神経毒による痙攣とは異なり、敗血症は通常、弛緩性麻痺（flaccid paralysis）として現れる。ヤドカリは貝殻の外に力なく垂れ下がり、接触に対して反応を示さない。バンパイアクラブは水陸の境界でぐったりとする。</li>
-      </ul>
-
-      <h3>2.4 寄生虫感染：筋肉融解と代謝枯渇</h3>
-      <h4>2.4.1 微胞子虫（Microsporidia）と「コットンクラブ」</h4>
-      <p><em>Ameson michaelis</em> などの微胞子虫は筋肉細胞内に寄生する。</p>
-      <ul>
-        <li><strong>病理変化：</strong> 寄生虫は筋線維の融解（lysis）を引き起こし、筋肉組織を不透明な白亜色または綿状に変える（それゆえ Cotton Crab と呼ばれる）。</li>
-        <li><strong>行動への影響：</strong> 筋線維の破壊に伴い収縮力が大幅に低下し、極度の嗜眠と動作不能を引き起こす。この感染は通常、共食いに起因し、筋肉の質感を悪化させる。</li>
-      </ul>
-
-      <h4>2.4.2 ビタークラブ病（Bitter Crab Disease, BCD）</h4>
-      <p>寄生性鞭毛虫 <em>Hematodinium spp.</em> によって引き起こされる。</p>
-      <ul>
-        <li><strong>メカニズム：</strong> 寄生虫が血リンパ内で大量増殖し、宿主の酸素とグルコースを消費するため、宿主は慢性の低酸素状態と飢餓状態に陥る。</li>
-        <li><strong>症状：</strong> 四肢の下垂（drooping limbs）と口器の脱力が見られ、調理後の筋肉は粉状になり苦味を呈する。</li>
-      </ul>
-
-      <h2>3. 毒性学と環境ストレス因子：化学的麻痺メカニズム</h2>
-      <p>陸生環境に生息するオカガニは、空気伝播性の殺虫剤や水源中の重金属に直接曝露されるリスクがある。神経毒は、非感染性の急性麻痺を引き起こす主要因である。</p>
-
-      <h3>3.1 重金属中毒：銅と亜鉛の致死性</h3>
-      <p>甲殻類は銅（Copper）に対して極めて敏感である。ヘモシアニン（Hemocyanin）の構成には銅イオンが必要であるが、過剰な銅は強力な神経毒となる。</p>
-      <ul>
-        <li><strong>麻痺のメカニズム：</strong> 銅イオンは神経細胞膜上の電位依存性イオンチャネルを阻害し、神経インパルスの伝導を遮断する。また、浸透圧調節に関与する酵素系を阻害する。</li>
-        <li><strong>臨床症状：</strong> 中毒初期には運動失調が現れ、カニは千鳥足のような歩行を示し、転倒しても起き上がれなくなる。その後、完全な麻痺と死へと進行する。</li>
-        <li><strong>原因：</strong> 水道管（銅管）、銅含有薬剤（魚類用寄生虫薬）、除藻剤。</li>
-      </ul>
-
-      <h3>3.2 農薬および殺虫剤中毒</h3>
-      <p>オカガニは家庭環境や農業地域の周辺で飼育・生息することが多く、殺虫剤に接触しやすい。</p>
-      <ul>
-        <li><strong>有機リン系およびカーバメート系（Organophosphates/Carbamates）：</strong> これらの殺虫剤はアセチルコリンエステラーゼ（AChE）を阻害し、シナプス間隙に神経伝達物質アセチルコリンを蓄積させ、神経の持続的な興奮を引き起こす。
-          <ul>
-            <li><strong>症状：</strong> 典型的な強直性痙攣（Tetany）。激しい肢の単収縮（twitching）、振戦、その後の筋肉硬直性麻痺が見られる。これは敗血症の弛緩性麻痺とは対照的である。</li>
-          </ul>
-        </li>
-        <li><strong>ピレスロイド系（Pyrethroids）：</strong> 神経細胞の過剰興奮を引き起こし、急速な自切（断肢）反応と転倒を誘発する。</li>
-      </ul>
-
-      <h3>3.3 水質毒性：塩素とアンモニア</h3>
-      <ul>
-        <li><strong>塩素（Chlorine）：</strong> 水道水中の塩素またはクロラミンは、カニのエラ組織を酸化破壊し、呼吸不全を引き起こす。低酸素の直接的な結果として、極度の嗜眠と活動力喪失が生じる。</li>
-        <li><strong>アンモニア中毒：</strong> 高濃度のアンモニアは神経系損傷を引き起こし、カニは水域から逃れようと焦燥感を示した後、嗜眠状態に陥る。</li>
-      </ul>
-
-      <h2>4. 生理学的および栄養学的障害：脱皮、カルシウム、筋肉病変</h2>
-      <p>すべての運動不全が外部病原体によって引き起こされるわけではなく、内在的な代謝障害も同様に重要である。</p>
-
-      <h3>4.1 脱皮期の生理的変化 vs. 病理学的状態</h3>
-      <p>「脱皮前の徴候」と「疾患」の区別は、臨床診断における大きな課題である。</p>
-      <ul>
-        <li><strong>脱皮前の嗜眠：</strong> オカガニは脱皮の数週間前からカルシウムの再吸収を行い、摂食を停止し、活動力が低下し、潜るための穴を掘る。これは正常な生理現象である。</li>
-        <li><strong>脱皮不全（Dysecdysis）：</strong> 環境湿度が不足していると、古い殻が乾燥して剥がれず、カニが古い殻の中に閉じ込められる。これは肢の虚血性壊死や、もがきによる自切を引き起こす。閉じ込められたカニは動くことができず、外見上は麻痺しているように見える。</li>
-        <li><strong>軟殻期の脱力：</strong> 脱皮直後の新しい殻は硬化しておらず、筋肉が付着するためのレバー支点を欠くため、この段階のカニは物理的にほとんど立つことができない（一時的な物理的麻痺）。</li>
-      </ul>
-
-      <h3>4.2 低カルシウム血症（Hypocalcemia）と強直（Tetany）</h3>
-      <p>カルシウムは外骨格の成分であるだけでなく、筋肉収縮と神経伝達の重要なイオンである。</p>
-      <ul>
-        <li><strong>病理メカニズム：</strong> 血リンパ中のカルシウムイオン濃度が過度に低下すると、神経筋接合部の興奮性が異常に高まる。</li>
-        <li><strong>症状：</strong> 筋肉痙攣、肢の硬直、引きつけとして現れる。影響を受けたカニの脚は硬直して曲げられなくなったり、制御不能な震えを示したりする。これは海水やカルシウム補給（野菜のみの給餌など）が長期的に不足している飼育環境でよく見られる。</li>
-      </ul>
-
-      <h3>4.3 白筋症（White Muscle Disease）：栄養性筋変性</h3>
-      <p>これは微量元素の欠乏によって引き起こされる非感染性疾患である。</p>
-      <ul>
-        <li><strong>原因：</strong> セレン（Selenium）およびビタミンEの欠乏。これらは細胞内の抗酸化物質であり、欠乏すると筋肉細胞膜が酸化的損傷を受けて壊死する。</li>
-        <li><strong>症状：</strong> 筋肉組織が白濁化し（微胞子虫感染の外観と類似）、進行性の筋力低下を招く。透明度の高い甲殻類（幼体や一部のバンパイアクラブなど）では、筋肉が白く不透明になるのを甲殻越しに直接観察できる。</li>
-      </ul>
-
-      <h2>5. 鑑別診断マトリックス：症状から病因へ</h2>
-      <p>的確な治療を行うためには、臨床症状に基づいて鑑別診断を行う必要がある。下表は、異なる病因の重要な差異をまとめたものである。</p>
+    <div class="menu-list">
       
-      <table>
-        <thead>
-          <tr>
-            <th>臨床症状群</th>
-            <th>考えられる病因</th>
-            <th>重要な鑑別特徴</th>
-            <th>診断の手がかり</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>嗜眠 + 血リンパ乳白化 + 口器下垂</strong></td>
-            <td>ビタークラブ病 (<em>Hematodinium</em>)</td>
-            <td>血液不凝固、筋肉が苦い/粉状</td>
-            <td>体液採取検査</td>
-          </tr>
-          <tr>
-            <td><strong>嗜眠 + 振戦 + 失明</strong></td>
-            <td>ウイルス性神経壊死 (RLV)</td>
-            <td>発症が極めて速い (3日以内)、逃避反射なし</td>
-            <td>集団死の発生</td>
-          </tr>
-          <tr>
-            <td><strong>強直性麻痺 (脚硬直) + 痙攣</strong></td>
-            <td>殺虫剤中毒 または 低カルシウム血症</td>
-            <td>筋肉の持続的収縮、弛緩ではない</td>
-            <td>食事歴/環境薬剤使用歴</td>
-          </tr>
-          <tr>
-            <td><strong>弛緩性麻痺 (ぐったり) + 殻外垂下</strong></td>
-            <td>細菌性敗血症 または 熱中症</td>
-            <td>接触反応なし、全身の緊張消失</td>
-            <td>高温環境または水質悪臭</td>
-          </tr>
-          <tr>
-            <td><strong>歩行不安定 (千鳥足) + 起立不能</strong></td>
-            <td>重金属中毒 (銅/亜鉛)</td>
-            <td>平衡感覚喪失、水換え後に頻発</td>
-            <td>水道水や銅剤の使用</td>
-          </tr>
-          <tr>
-            <td><strong>甲羅潰瘍 + 肢端欠損</strong></td>
-            <td>細菌性/真菌性シェルロット</td>
-            <td>黒色/褐色の斑点および侵食が見られる</td>
-            <td>外観検査</td>
-          </tr>
-          <tr>
-            <td><strong>嗜眠 + 穴掘り/隠れる + 食欲変化</strong></td>
-            <td>脱皮前兆 (生理的)</td>
-            <td>外観は正常、以前に過食行動あり</td>
-            <td>脱皮嚢 (Gelpouch) の確認</td>
-          </tr>
-          <tr>
-            <td><strong>筋肉白濁不透明 + 慢性的脱力</strong></td>
-            <td>微胞子虫 または 白筋症</td>
-            <td>筋肉の紋理消失、綿状の外観</td>
-            <td>ミネラル不足の食事</td>
-          </tr>
-        </tbody>
-      </table>
+      <a href="land_crab.html" class="menu-item">
+        <h2>陸棲甲殻類</h2>
+        <p>Land Crabs / Terrestrial Species</p>
+        <p style="font-size: 14px; margin-top: 10px; color: #888;">オカガニ、オカヤドカリ、バンパイアクラブ等</p>
+      </a>
 
-      <h2>6. 包括的治療戦略と臨床処置</h2>
-      <p>オカガニの運動不全と疾患に対する治療は、環境制御、輸液療法、創傷ケア、栄養サポートを含む多角的なアプローチが必要である。</p>
-
-      <h3>6.1 緊急隔離・検疫システム（ISO Tank）の確立</h3>
-      <p>異常を示すカニに対する最初のステップは隔離である。</p>
-      <ul>
-        <li><strong>目的：</strong> 感染症の拡散を防ぎ、衰弱した病蟹を共食い（健康なカニは衰弱した個体を攻撃する）から保護する。</li>
-        <li><strong>設置基準：</strong>
-          <ul>
-            <li><strong>容器：</strong> 清掃しやすいプラスチックケースまたはガラス水槽を使用。</li>
-            <li><strong>床材：</strong> 厚い底砂を一時的に取り除き、湿らせたペーパータオルまたは浅い滅菌砂を使用する（排泄物や脱皮の観察のため）。</li>
-            <li><strong>温湿度：</strong> 温度は25-28°C、湿度は80%以上を維持する。低温は嗜眠を悪化させ、低湿度は脱水と脱皮不全を招く。</li>
-          </ul>
-        </li>
-      </ul>
-
-      <h3>6.2 輸液療法と薬浴（Medicinal Baths）</h3>
-      <p>薬浴は水生/半水生動物にとって最も効果的な治療法であり、薬剤はエラを通じて直接吸収される。</p>
-
-      <h4>6.2.1 高浸透圧塩浴（Saline Bath）</h4>
-      <ul>
-        <li><strong>適応：</strong> 脱水、一般的なストレス緩和、軽度の外部寄生虫、体表毒素の排出補助。</li>
-        <li><strong>処方：</strong> 人工海水（Marine Salt、例：Instant Ocean）を使用する。食塩は厳禁。比重は1.020-1.025に調整。</li>
-        <li><strong>操作：</strong> 10-20分間浸漬する。カニが自発的に眼柄を水面に出して呼吸できる水位を確保する。これは浸透圧を調節し、失われた電解質を補給するのに役立つ。</li>
-      </ul>
-
-      <h4>6.2.2 ポビドンヨード浴（Betadine/Iodine Bath）</h4>
-      <ul>
-        <li><strong>適応：</strong> 細菌性甲羅腐敗、真菌感染、外傷消毒。</li>
-        <li><strong>処方：</strong> ポビドンヨード（イソジン等）を治療用水に滴下し、水色が「薄い茶色」になるまで調整する。</li>
-        <li><strong>操作：</strong>
-          <ul>
-            <li><strong>全身浴：</strong> 敗血症の初期または広範囲の皮膚病に使用。時間は約5-10分。ヨウ素は高濃度では毒性があるため過量に注意する。</li>
-            <li><strong>局所清創：</strong> 重度のシェルロットの場合、柔らかいブラシで壊死組織を軽く除去（デブリードマン）した後、綿棒で原液を患部に塗布し、10-20分乾燥させてから隔離タンクに戻す。</li>
-          </ul>
-        </li>
-      </ul>
-
-      <h4>6.2.3 メチレンブルー薬浴（Methylene Blue）</h4>
-      <ul>
-        <li><strong>適応：</strong> 真菌感染（LCDの <em>Exophiala</em> など）、アンモニア/亜硝酸中毒、エラ損傷による低酸素症。</li>
-        <li><strong>メカニズム：</strong> メチレンブルーは抗真菌作用を持ち、メトヘモグロビンを還元して血液の酸素運搬能力を増強するため、低酸素により嗜眠状態にあるカニに対して救急効果がある。</li>
-        <li><strong>処方：</strong> 一般的な用量は、10ガロンの水につき2.3%溶液を小さじ1杯（約5ml）、または30分間の倍濃度薬浴を行う。</li>
-        <li><strong>注意：</strong> メチレンブルーは着色性が強く、硝化バクテリアを死滅させるため、主飼育槽への直接投入は厳禁とし、隔離タンクまたは独立容器でのみ使用する。</li>
-      </ul>
-
-      <h3>6.3 栄養リハビリテーション：エナジーミックス（Energy Mix）療法</h3>
-      <p>運動不全のカニは自力で摂食できないことが多く、エネルギー枯渇を招く。栄養サポートは筋力回復の鍵である。</p>
-      <ul>
-        <li><strong>エナジーミックス処方：</strong> 海外の熟練飼育者（Mary Akersら）が推奨する救急レシピ。
-          <ul>
-            <li><strong>即効性エネルギー（糖質）：</strong> 蜂蜜、メープルシロップ、または糖蜜。脳と筋肉に即時利用可能なグルコースを供給する。</li>
-            <li><strong>筋肉修復（タンパク質/脂質）：</strong> ピーナッツバター、ココナッツオイル、オキアミ粉末、スピルリナ粉末。組織修復と脱皮に必要なエネルギーを提供する。</li>
-            <li><strong>神経安定（カルシウム/ミネラル）：</strong> イカの甲粉末、卵殻パウダー、牡蠣殻パウダー。低カルシウムによる痙攣を緩和するためにカルシウムを補給する。</li>
-          </ul>
-        </li>
-        <li><strong>給餌方法：</strong> 混合物をペースト状にし、極めて浅い皿に入れてカニの口器の前に置く。カニが完全に無力な場合、爪楊枝で少量を口器付近に塗布し、反射的な嚥下を利用する。物理的損傷を避けるため、無理に口器をこじ開けてはならない。</li>
-      </ul>
-
-      <h3>6.4 薬物療法（上級）</h3>
-      <p>通常のケアが無効な場合、抗生物質の使用を検討する。この治療は通常、適応外使用（Off-label use）となる。</p>
-      <ul>
-        <li><strong>抗生物質の選択：</strong>
-          <ul>
-            <li><strong>Erythromycin（エリスロマイシン、例：Maracyn）：</strong> グラム陽性菌に有効で、頑固なシェルロットやレンサ球菌感染の治療によく用いられる。</li>
-            <li><strong>Tetracycline/Doxycycline（テトラサイクリン系）：</strong> 広域抗生物質で、全身性細菌感染に使用可能。テトラサイクリンはカルシウムイオンと結合するため、治療期間中はカルシウムの追加補給が必要である。</li>
-          </ul>
-        </li>
-        <li><strong>局所抗生物質軟膏：</strong> Silver Sulfadiazine（スルファジアジン銀軟膏）など。デブリードマン後の深部潰瘍に使用し、優れた抗菌作用と治癒促進効果を持つ。</li>
-      </ul>
-
-      <h3>6.5 自切（Autotomy）への対応</h3>
-      <p>病気やストレスによりカニが自切した場合：</p>
-      <ul>
-        <li><strong>再生を強制しない：</strong> 再生は脱皮過程でのみ起こる。</li>
-        <li><strong>支持療法：</strong> 歩脚を失ったカニは重心が不安定で転倒しやすい。タンク内の障害物を減らし、水入れを浅い皿に変え、餌を手の届く範囲に配置する。</li>
-      </ul>
-
-      <h2>7. 結論と提言</h2>
-      <p>オカガニにおける「動作緩慢」や「運動不全」は非特異的な臨床徴候であり、その背後には致死的なウイルス感染から単純な環境ストレスまで、多種多様な病因が潜んでいる可能性がある。詳細な病歴聴取（毒物接触の有無、水源、食事内容）と綿密な臨床観察（筋肉の透明度、振戦 vs 弛緩、甲羅病変）を通じて、飼育者と臨床医は診断範囲を大幅に絞り込むことができる。</p>
-      <p>治療の核心原則は以下のように要約される：</p>
-      <ol>
-        <li><strong>伝染と共食いを遮断するための即時隔離。</strong></li>
-        <li><strong>正常な生理プロセスを妨げないための、脱皮と疾病の明確な区別。</strong></li>
-        <li><strong>浸透圧と酸素運搬量を維持するための積極的な輸液療法（塩浴/メチレンブルー）。</strong></li>
-        <li><strong>代謝不全を逆転させるための高エネルギー栄養サポート。</strong></li>
-      </ol>
-      <p>今後の研究は、オカガニ専用の抗ウイルス療法の開発、および <em>Exophiala</em> 真菌の疫学調査に重点を置くべきである。飼育者にとっては、「治療よりも予防」が重要であり、安定した温湿度の維持、清浄かつミネラルを含んだ水源の提供、そして多様な食事の給餌が、このような運動障害を根絶するための最良の戦略であり続ける。</p>
-
-      <h3>表1：常用治療薬浴プロトコル要約</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>薬浴の種類</th>
-            <th>推奨薬剤/製品</th>
-            <th>濃度/処方</th>
-            <th>浸漬時間</th>
-            <th>主な用途</th>
-            <th>注意事項</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>高浸透圧塩浴</strong></td>
-            <td>Instant Ocean 人工海水</td>
-            <td>比重 1.020-1.025 (約35g/L)</td>
-            <td>10-20 分</td>
-            <td>脱水、ストレス、一般保健</td>
-            <td>食塩使用不可；水温を合わせる</td>
-          </tr>
-          <tr>
-            <td><strong>ヨウ素浴消毒</strong></td>
-            <td>Povidone-Iodine (Betadine)</td>
-            <td>薄い茶色になるまで希釈</td>
-            <td>5-10 分</td>
-            <td>細菌性シェルロット、外傷</td>
-            <td>濃度過多によるエラ灼傷に注意</td>
-          </tr>
-          <tr>
-            <td><strong>メチレンブルー浴</strong></td>
-            <td>Methylene Blue (2.3%)</td>
-            <td>10ガロンにつき小さじ1 (または倍濃度で薬浴)</td>
-            <td>30 分</td>
-            <td>真菌感染、アンモニア中毒、低酸素</td>
-            <td>着色する；独立容器で操作</td>
-          </tr>
-          <tr>
-            <td><strong>抗生物質薬浴</strong></td>
-            <td>Maracyn (Erythromycin)</td>
-            <td>パッケージ指示通り (通常1包/10ガロン)</td>
-            <td>連続5日間 (要水換え)</td>
-            <td>全身性細菌感染</td>
-            <td>濾過バクテリアを破壊；エアレーション必須</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>表2：オカガニ運動障害の迅速チェックリスト</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>チェック項目</th>
-            <th>観察ポイント</th>
-            <th>潜在的な意味</th>
-            <th>推奨アクション</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>肢の緊張度</strong></td>
-            <td>硬直/痙攣 (Tetany)</td>
-            <td>中毒、低カルシウム血症</td>
-            <td>水源交換、カルシウム剤添加</td>
-          </tr>
-          <tr>
-            <td><strong>肢の緊張度</strong></td>
-            <td>弛緩/脱力 (Flaccid)</td>
-            <td>敗血症、高温、ウイルス</td>
-            <td>クーリング、抗生物質治療</td>
-          </tr>
-          <tr>
-            <td><strong>甲羅の外観</strong></td>
-            <td>黒色潰瘍/穿孔</td>
-            <td>シェルロット（殻腐病）</td>
-            <td>デブリードマン、ヨウ素浴</td>
-          </tr>
-          <tr>
-            <td><strong>筋肉の色</strong></td>
-            <td>白色/不透明 (腹部)</td>
-            <td>白筋症、微胞子虫</td>
-            <td>セレン/ビタミンE補給、隔離</td>
-          </tr>
-          <tr>
-            <td><strong>最近の行動</strong></td>
-            <td>過食後の穴掘り・隠れ</td>
-            <td>脱皮前兆</td>
-            <td>干渉禁止、湿度維持</td>
-          </tr>
-          <tr>
-            <td><strong>環境履歴</strong></td>
-            <td>最近の殺虫剤使用/新水への交換</td>
-            <td>神経毒性</td>
-            <td>清浄な環境へ移動、大量換水</td>
-          </tr>
-        </tbody>
-      </table>
+      <a href="water_crab.html" class="menu-item">
+        <h2>サワガニ・淡水蟹</h2>
+        <p>Geothelphusa / Freshwater Crabs</p>
+        <p style="font-size: 14px; margin-top: 10px; color: #888;">サワガニ属およびその他の淡水生種</p>
+      </a>
 
     </div>
-  </div>
 
+    <a href="index.html" class="back-link">← Return to Home</a>
+  </div>
 </body>
 </html>
