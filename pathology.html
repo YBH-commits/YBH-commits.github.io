@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>病理｜Crab Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      /* 背景圖設定 */
+      background-image: url('/images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #fff;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 900px; /* 文章比較長，寬度設寬一點 */
+      margin: 0 auto;
+    }
+
+    /* 文章內容的半透明背景盒子 */
+    .content-box {
+      background-color: rgba(0, 0, 0, 0.85); /* 黑色背景，透明度低一點讓字更清楚 */
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    /* 返回按鈕 */
+    .back-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #ddd;
+      text-decoration: none;
+      font-size: 16px;
+      background-color: rgba(255,255,255,0.1);
+      padding: 8px 20px;
+      border-radius: 20px;
+      transition: all 0.3s;
+    }
+    .back-link:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* 標題樣式 */
+    h1 {
+      font-size: 36px;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #81d4fa; /* 淺藍色標題，區分層級 */
+      margin-top: 50px;
+      margin-bottom: 20px;
+      border-left: 5px solid #81d4fa;
+      padding-left: 15px;
+    }
+
+    h3 {
+      font-size: 22px;
+      color: #b3e5fc;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #e1f5fe;
+      text-decoration: underline;
+    }
+
+    /* 摘要區塊 */
+    .abstract {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-left: 4px solid #fff;
+      margin-bottom: 40px;
+      font-style: italic;
+      color: #eee;
+    }
+
+    /* 列表樣式 */
+    ul {
+      margin-bottom: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    strong {
+      color: #ffcc80; /* 重點文字用淡橘色 */
+    }
+
+    /* 表格樣式 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      font-size: 16px;
+    }
+    th, td {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="content-box">
+      <a href="index.html" class="back-link">← Return to Home</a>
+
+      <h1>オカガニ類の病理学と臨床管理</h1>
+      <p style="font-size: 20px; margin-bottom: 40px; color: #ccc;">動作緩慢、運動障害および包括的治療戦略に関する詳細研究報告要旨</p>
+
+      <div class="abstract">
+        <strong>要旨</strong><br>
+        本報告書は、陸生および半陸生十脚目甲殻類（通称オカガニ類）が呈する動作緩慢、運動失調、麻痺および関連する病理学的徴候について、その病因学的分析と臨床治療プロトコルを詳述することを目的とする。本報告では、「カニ嗜眠病」（LCD）、ウイルス性神経壊死、細菌性甲羅腐敗病、微胞子虫感染症、重金属および殺虫剤中毒、白筋症などの発症メカニズムを解析し、隔離検疫、薬浴療法、および栄養リハビリテーションを含むエビデンスに基づいた治療フレームワークを提供する。
+      </div>
+
+      <h2>1. 序論：オカガニの運動生理学と病理学的メカニズムの基礎</h2>
+      <p>オカガニの運動生理学的メカニズムは、環境に対して極めて敏感で精密なシステムである。オカガニが「動作緩慢」や「運動不全」を示している場合、我々は実際には複雑な生理学的崩壊の末期的症状を観察していることになる。</p>
+
+      <h3>1.1 神経筋制御と血リンパ動態</h3>
+      <p>甲殻類の運動は、神経系によって制御される横紋筋に依存しているが、動作の効率は血リンパの膨圧（turgor pressure）に強く依存している。感染症や脱水により体液量が不足した場合、神経シグナルが正常であっても、筋肉は十分な力を生成できない。したがって、臨床上の「脱力」はしばしば循環器系の不全の兆候である。</p>
+
+      <h3>1.2 運動障害の臨床分類</h3>
+      <ul>
+        <li><strong>嗜眠（Lethargy）：</strong> 外的刺激に対する反応が鈍化するが、基本的な反射は保持されている。</li>
+        <li><strong>運動失調（Ataxia）：</strong> 歩行がふらつき、バランスを維持できず、転倒後に自力で起き上がれない。</li>
+        <li><strong>麻痺（Paralysis）：</strong>
+          <ul>
+            <li><strong>弛緩性麻痺：</strong> 筋緊張が消失し、肢がダラリとする（敗血症など）。</li>
+            <li><strong>強直性麻痺：</strong> 筋肉が痙攣し、肢が硬直する（神経毒、低カルシウム）。</li>
+          </ul>
+        </li>
+        <li><strong>自切（Autotomy）：</strong> ストレスや感染に対する防御反応としての自発的な肢の切断。</li>
+      </ul>
+
+      <h2>2. 感染性病因：ウイルス、細菌、真菌</h2>
+
+      <h3>2.1 ウイルス性病原体と神経系損傷</h3>
+      <p><strong>レオ様ウイルス（RLV）：</strong> 感染個体は極度の嗜眠、振戦（震え）、進行性の麻痺を示す。共食いを通じて伝播し、病状の進行は極めて速い。<br>
+      <strong>ホワイトスポット症候群ウイルス（WSSV）：</strong> 甲羅の白点に加え、重度の嗜眠と運動停止を引き起こす。</p>
+
+      <h3>2.2 真菌性疾患：カニ嗜眠病（LCD）</h3>
+      <p>病原体は黒色酵母 <em>Exophiala cancerae</em> である。真菌細胞が神経線維を物理的に圧迫し、血リンパの循環を阻害することで、運動失調や強直状態を引き起こす。</p>
+
+      <h3>2.3 細菌感染</h3>
+      <p><strong>甲羅腐敗病（Shell Rot）：</strong> 潰瘍が関節に達すると可動域が制限され、脱皮不全を招く。<br>
+      <strong>敗血症：</strong> 細菌が体内に侵入すると代謝性アシドーシスを引き起こし、全身の弛緩性麻痺（ぐったりとした状態）となる。</p>
+
+      <h3>2.4 寄生虫感染</h3>
+      <p><strong>微胞子虫（Cotton Crab）：</strong> 筋肉を融解させ、筋肉を白く不透明にする。極度の筋力低下を招く。<br>
+      <strong>ビタークラブ病：</strong> 寄生虫が酸素と栄養を消費し、カニを慢性的な飢餓と酸欠状態にする。</p>
+
+      <h2>3. 毒性学と環境ストレス因子</h2>
+
+      <h3>3.1 重金属中毒（銅・亜鉛）</h3>
+      <p>甲殻類は銅に極めて敏感である。過剰な銅は神経伝達を遮断し、千鳥足のような歩行（運動失調）や完全な麻痺を引き起こす。原因は主に水道管や薬浴剤である。</p>
+
+      <h3>3.2 殺虫剤中毒</h3>
+      <p><strong>有機リン系：</strong> 神経の持続的な興奮を引き起こし、激しい痙攣（強直性麻痺）を誘発する。<br>
+      <strong>ピレスロイド系：</strong> 急速な自切反応と転倒を引き起こす。</p>
+
+      <h2>4. 生理学的および栄養学的障害</h2>
+
+      <h3>4.1 脱皮とカルシウム</h3>
+      <p><strong>脱皮前の嗜眠：</strong> 正常な生理現象。<br>
+      <strong>脱皮不全：</strong> 湿度が低いと古い殻に閉じ込められ、動けなくなる。<br>
+      <strong>低カルシウム血症：</strong> カルシウム不足は神経の過剰興奮を招き、肢の硬直や痙攣（テタニー）を引き起こす。</p>
+
+      <h3>4.2 白筋症（White Muscle Disease）</h3>
+      <p>セレンおよびビタミンEの欠乏により、筋肉細胞が壊死して白濁する病気。進行性の筋力低下が見られる。</p>
+
+      <h2>5. 鑑別診断マトリックス</h2>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>臨床症状群</th>
+            <th>考えられる病因</th>
+            <th>重要な鑑別特徴</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>嗜眠 + 血リンパ乳白化 + 口器下垂</strong></td>
+            <td>ビタークラブ病</td>
+            <td>血液不凝固、筋肉が苦い/粉状</td>
+          </tr>
+          <tr>
+            <td><strong>嗜眠 + 振戦 + 失明</strong></td>
+            <td>ウイルス性神経壊死 (RLV)</td>
+            <td>発症が極めて速い、集団死</td>
+          </tr>
+          <tr>
+            <td><strong>強直性麻痺 (脚硬直) + 痙攣</strong></td>
+            <td>殺虫剤中毒 / 低カルシウム</td>
+            <td>筋肉の持続的収縮</td>
+          </tr>
+          <tr>
+            <td><strong>弛緩性麻痺 (ぐったり) + 殻外垂下</strong></td>
+            <td>敗血症 / 熱中症</td>
+            <td>接触反応なし、全身の緊張消失</td>
+          </tr>
+          <tr>
+            <td><strong>歩行不安定 + 起立不能</strong></td>
+            <td>重金属中毒 (銅/亜鉛)</td>
+            <td>平衡感覚喪失、水換え後に頻発</td>
+          </tr>
+          <tr>
+            <td><strong>筋肉白濁不透明 + 慢性的脱力</strong></td>
+            <td>微胞子虫 / 白筋症</td>
+            <td>筋肉の紋理消失、綿状の外観</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>6. 包括的治療戦略と臨床処置</h2>
+
+      <h3>6.1 緊急隔離・検疫システム（ISO Tank）</h3>
+      <p>感染拡大と共食いを防ぐため、直ちに隔離する。温度25-28°C、湿度80%以上を維持し、床材はキッチンペーパー等を使用する。</p>
+
+      <h3>6.2 薬浴療法（Medicinal Baths）</h3>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>薬浴の種類</th>
+            <th>処方・濃度</th>
+            <th>主な用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>高浸透圧塩浴</strong></td>
+            <td>人工海水 (比重 1.020-1.025)</td>
+            <td>脱水、ストレス緩和、電解質補給</td>
+          </tr>
+          <tr>
+            <td><strong>ポビドンヨード浴</strong></td>
+            <td>薄い茶色になるまで希釈</td>
+            <td>細菌性シェルロット、外傷消毒</td>
+          </tr>
+          <tr>
+            <td><strong>メチレンブルー浴</strong></td>
+            <td>10ガロンにつき小さじ1</td>
+            <td>真菌感染、アンモニア中毒、酸欠救急</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>6.3 栄養リハビリテーション：エナジーミックス</h3>
+      <p>自力で食べられないカニのための救急レシピ：蜂蜜（即効性エネルギー）、ピーナッツバター/オキアミ粉（修復）、卵殻パウダー（カルシウム）をペースト状にして口器に塗布する。</p>
+
+      <h3>6.4 抗生物質と自切ケア</h3>
+      <p>細菌感染にはエリスロマイシン等の抗生物質薬浴を検討する。自切したカニには、転倒を防ぐために障害物を減らし、浅い水皿を提供する。</p>
+
+      <h2>7. 結論</h2>
+      <p>オカガニの運動障害は、ウイルスから環境ストレスまで多岐にわたる。治療の核心は、<strong>即時隔離</strong>、<strong>適切な輸液（塩浴）</strong>、および<strong>高エネルギー栄養サポート</strong>にある。「治療よりも予防」が重要であり、安定した環境と多様な食事が最良の予防策である。</p>
+
+    </div>
+  </div>
+
+</body>
+</html>
