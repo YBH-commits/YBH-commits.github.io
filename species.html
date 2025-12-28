@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -36,15 +37,16 @@
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
-    /* 分類標題樣式 */
+    /* 純日文分類標題 */
     .category-title {
       font-size: 24px;
-      color: #81d4fa; /* 淺藍色亮眼一點 */
+      color: #81d4fa;
       margin-top: 60px;
       margin-bottom: 20px;
       border-left: 5px solid #81d4fa;
       padding-left: 15px;
       background: linear-gradient(90deg, rgba(129, 212, 250, 0.1), transparent);
+      font-weight: 700;
     }
 
     .back-link {
@@ -90,31 +92,69 @@
       font-size: 28px;
       margin: 0 0 10px 0;
       color: #fff;
+      font-weight: 500;
     }
     
-    .species-item h2 span {
-      font-size: 18px;
-      color: #ddd;
-      margin-left: 10px;
-    }
-
+    /* 移除拉丁學名樣式，只留日文 */
     .species-item p {
       margin: 0;
-      font-size: 18px;
+      font-size: 16px;
       color: #ccc;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <a href="index.html" class="back-link">← Return to Home</a>
+    <a href="index.html" class="back-link">← ホームに戻る</a>
 
-    <h1>種類一覧｜Species List</h1>
+    <h1>種類一覧</h1>
 
     <div class="species-list">
 
-      <div class="category-title">陸棲ガニ（Terrestrial Crabs）</div>
+      <div class="category-title">陸棲ガニ</div>
       
       <a href="tuerkayana.html" class="species-item">
-        <h2>Tuerkayana magnum <span>オオエンジクガニ</span></h2>
-        <p>陸生 / オカガニ科 / 東アジアおよびインド太平洋地域の沿岸部に生息
+        <h2>オオエンジクガニ</h2>
+        <p>陸生 / オカガニ科 / 沿岸部の森林や洞窟に生息</p>
+      </a>
+
+      <div class="category-title">サワガニ</div>
+
+      <a href="#" class="species-item">
+        <h2>サワガニ類</h2>
+        <p>淡水生 / サワガニ科 / 山間部の清流域に生息</p>
+      </a>
+
+      <div class="category-title">海産ガニ</div>
+
+      <a href="#" class="species-item">
+        <h2>ヨーロッパイチョウガニ</h2>
+        <p>海洋 / イチョウガニ科 / 食用として知られる大型種</p>
+      </a>
+
+      <div class="category-title">ヤドカリ</div>
+
+      <a href="#" class="species-item">
+        <h2>オカヤドカリ</h2>
+        <p>陸生 / オカヤドカリ科 / 貝殻を背負い海岸林で生活</p>
+      </a>
+
+      <div class="category-title">カブトガニ</div>
+
+      <a href="#" class="species-item">
+        <h2>カブトガニ</h2>
+        <p>海洋 / カブトガニ科 / 干潟に生息する「生きた化石」</p>
+      </a>
+
+      <div class="category-title">その他</div>
+
+      <a href="#" class="species-item">
+        <h2>その他の甲殻類</h2>
+        <p>分類未定 / 詳細データ準備中</p>
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>
