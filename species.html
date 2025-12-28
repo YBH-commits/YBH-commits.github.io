@@ -1,160 +1,60 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>種類一覧｜Crab Archive</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-image: url('/images/bg.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      font-family: 'Noto Sans JP', sans-serif;
-      color: #fff;
-      font-size: 20px;
-      line-height: 2;
-    }
-
-    .container {
-      padding: 80px 40px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      font-size: 40px;
-      font-weight: 700;
-      margin-bottom: 60px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    }
-
-    /* 純日文分類標題 */
-    .category-title {
-      font-size: 24px;
-      color: #81d4fa;
-      margin-top: 60px;
-      margin-bottom: 20px;
-      border-left: 5px solid #81d4fa;
-      padding-left: 15px;
-      background: linear-gradient(90deg, rgba(129, 212, 250, 0.1), transparent);
-      font-weight: 700;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-bottom: 40px;
-      color: #ddd;
-      text-decoration: none;
-      font-size: 16px;
-      background-color: rgba(0,0,0,0.5);
-      padding: 5px 15px;
-      border-radius: 20px;
-      transition: all 0.3s;
-    }
-    .back-link:hover {
-      color: #fff;
-      background-color: rgba(0,0,0,0.8);
-    }
-
-    .species-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .species-item {
-      display: block;
-      text-decoration: none;
-      color: #fff;
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 10px;
-      margin-bottom: 20px;
-      transition: all 0.3s;
-    }
-
-    .species-item:hover {
-      background-color: rgba(50, 50, 50, 0.8);
-      transform: translateY(-5px);
-      border-color: #81d4fa;
-    }
-
-    .species-item h2 {
-      font-size: 28px;
-      margin: 0 0 10px 0;
-      color: #fff;
-      font-weight: 500;
-    }
-    
-    /* 移除拉丁學名樣式，只留日文 */
-    .species-item p {
-      margin: 0;
-      font-size: 16px;
-      color: #ccc;
-      margin-top: 5px;
-    }
-  </style>
-</head>
 <body>
   <div class="container">
-    <a href="index.html" class="back-link">← ホームに戻る</a>
+    <a href="index.html" class="back-link">← Return to Home</a>
 
-    <h1>種類一覧</h1>
+    <h1>種類一覧｜Species List</h1>
 
     <div class="species-list">
 
-      <div class="category-title">陸棲ガニ</div>
+      <div class="category-title">陸棲ガニ（Land Crabs）</div>
       
       <a href="tuerkayana.html" class="species-item">
-        <h2>オオエンジクガニ</h2>
-        <p>陸生 / オカガニ科 / 沿岸部の森林や洞窟に生息</p>
+        <h2>Tuerkayana magnum <span>オオエンジクガニ</span></h2>
+        <p>陸生 / オカガニ科 / 東アジアおよびインド太平洋地域の沿岸部に生息</p>
       </a>
 
-      <div class="category-title">サワガニ</div>
+      <div class="category-title">サワガニ・淡水ガニ（Freshwater Crabs）</div>
 
       <a href="#" class="species-item">
-        <h2>サワガニ類</h2>
-        <p>淡水生 / サワガニ科 / 山間部の清流域に生息</p>
+        <h2>Geothelphusa dehaani <span>サワガニ</span></h2>
+        <p>淡水生 / サワガニ科 / 日本固有種、清流に生息</p>
       </a>
 
-      <div class="category-title">海産ガニ</div>
+      <div class="category-title">海棲ガニ（Marine Crabs）</div>
 
       <a href="#" class="species-item">
-        <h2>ヨーロッパイチョウガニ</h2>
-        <p>海洋 / イチョウガニ科 / 食用として知られる大型種</p>
+        <h2>Cancer pagurus <span>ヨーロッパイチョウガニ</span></h2>
+        <p>海生 / イチョウガニ科 / 北海、地中海などの岩礁域に生息</p>
       </a>
 
-      <div class="category-title">ヤドカリ</div>
+      <div class="category-title">エビ類（Shrimps）</div>
 
       <a href="#" class="species-item">
-        <h2>オカヤドカリ</h2>
-        <p>陸生 / オカヤドカリ科 / 貝殻を背負い海岸林で生活</p>
+        <h2>Penaeus japonicus <span>クルマエビ</span></h2>
+        <p>海生 / クルマエビ科 / 砂泥底に生息、重要な食用種</p>
       </a>
 
-      <div class="category-title">カブトガニ</div>
+      <div class="category-title">ヤドカリ類（Hermit Crabs）</div>
 
       <a href="#" class="species-item">
-        <h2>カブトガニ</h2>
-        <p>海洋 / カブトガニ科 / 干潟に生息する「生きた化石」</p>
+        <h2>Coenobita clypeatus <span>ムラサキオカヤドカリ</span></h2>
+        <p>陸生 / オカヤドカリ科 / 熱帯・亜熱帯の海岸近くに生息</p>
       </a>
 
-      <div class="category-title">その他</div>
+      <div class="category-title">カブトガニ類（Horseshoe Crabs）</div>
 
       <a href="#" class="species-item">
-        <h2>その他の甲殻類</h2>
-        <p>分類未定 / 詳細データ準備中</p>
+        <h2>Tachypleus tridentatus <span>カブトガニ</span></h2>
+        <p>海生 / カブトガニ科 / 干潟に生息、「生きた化石」と呼ばれる</p>
+      </a>
+
+      <div class="category-title">その他（Others）</div>
+
+      <a href="#" class="species-item">
+        <h2>Birgus latro <span>ヤシガニ</span></h2>
+        <p>陸生 / オカヤドカリ科 / 陸上生活をする最大の節足動物</p>
       </a>
 
     </div>
   </div>
 </body>
-</html>
