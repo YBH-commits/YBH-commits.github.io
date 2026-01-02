@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* 樣式保持不變 */
     html, body {
       margin: 0;
       padding: 0;
@@ -21,13 +20,11 @@
       font-size: 20px;
       line-height: 2;
     }
-
     .container {
       padding: 80px 40px;
       max-width: 900px;
       margin: 0 auto;
     }
-
     h1 {
       font-size: 40px;
       font-weight: 700;
@@ -36,7 +33,6 @@
       padding-bottom: 20px;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
-
     .back-link {
       display: inline-block;
       margin-bottom: 40px;
@@ -48,17 +44,12 @@
       border-radius: 20px;
       transition: all 0.3s;
     }
-    .back-link:hover {
-      color: #fff;
-      background-color: rgba(0,0,0,0.8);
-    }
-
+    .back-link:hover { color: #fff; background-color: rgba(0,0,0,0.8); }
     .category-list {
       display: grid;
       grid-template-columns: 1fr;
       gap: 20px;
     }
-
     .category-item {
       display: block;
       text-decoration: none;
@@ -72,58 +63,48 @@
       position: relative;
       overflow: hidden;
     }
-
     .category-item:hover {
       transform: translateX(10px);
       background: linear-gradient(135deg, rgba(50, 50, 50, 0.9), rgba(20, 20, 20, 0.9));
       border-color: #81d4fa;
       box-shadow: 0 0 20px rgba(129, 212, 250, 0.2);
     }
-
-    .category-item h2 {
-      font-size: 32px;
-      margin: 0 0 10px 0;
-      font-weight: 700;
-    }
-
-    .category-item p {
-      margin: 0;
-      font-size: 16px;
-      color: #aaa;
-    }
-    
+    .category-item h2 { font-size: 32px; margin: 0 0 10px 0; font-weight: 700; }
+    .category-item p { margin: 0; font-size: 16px; color: #aaa; }
     .arrow {
       position: absolute;
-      right: 30px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 30px;
-      color: #555;
-      transition: 0.3s;
+      right: 30px; top: 50%; transform: translateY(-50%);
+      font-size: 30px; color: #555; transition: 0.3s;
     }
-    
-    .category-item:hover .arrow {
-      color: #81d4fa;
-      right: 20px;
-    }
+    .category-item:hover .arrow { color: #81d4fa; right: 20px; }
   </style>
 </head>
 <body>
   <div class="container">
     <a href="https://ybh-commits.github.io/index.html" class="back-link">← ホームに戻る</a>
-
     <h1>種類一覧 (Categories)</h1>
-
     <div class="category-list">
-
       <a href="https://ybh-commits.github.io/terrestrial_crab.html" class="category-item">
         <h2>陸棲ガニ</h2>
         <p>Land Crabs / 陸生傾向の強いグループ</p>
         <span class="arrow">▶</span>
       </a>
-
       <a href="https://ybh-commits.github.io/freshwater.html" class="category-item">
         <h2>サワガニ (淡水蟹)</h2>
         <p>Freshwater Crabs / 河川・渓流・湖沼に生息</p>
         <span class="arrow">▶</span>
       </a>
+      <a href="https://ybh-commits.github.io/marine.html" class="category-item">
+        <h2>海産ガニ</h2>
+        <p>Marine Crabs / 海洋に生息するカニ類</p>
+        <span class="arrow">▶</span>
+      </a>
+      <a href="https://ybh-commits.github.io/others.html" class="category-item">
+        <h2>その他・甲殻類</h2>
+        <p>Others / ヤドカリ・エビ・カブトガニなど</p>
+        <span class="arrow">▶</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
