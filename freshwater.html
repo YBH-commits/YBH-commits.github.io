@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>淡水棲ガニ一覧｜Crab Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* 延續高質感的黑底風格 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-image: url('/images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #fff;
+      font-size: 20px;
+      line-height: 2;
+    }
+
+    .container {
+      padding: 80px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      color: #81d4fa;
+      margin-bottom: 60px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 20px;
+      letter-spacing: 0.1em;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+      background-color: rgba(0,0,0,0.5);
+      padding: 5px 15px;
+      border-radius: 20px;
+      transition: all 0.3s;
+    }
+    .back-link:hover {
+      color: #fff;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .species-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .species-item {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .species-item:hover {
+      background-color: rgba(30, 30, 30, 0.8);
+      transform: translateY(-5px);
+      border-color: #81d4fa;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .species-item h2 {
+      font-size: 26px;
+      margin: 0 0 10px 0;
+      color: #fff;
+      font-weight: 500;
+    }
+    
+    .species-item p {
+      margin: 0;
+      font-size: 15px;
+      color: #ccc;
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    /* 為庫氏蟹做特別的高亮顯示，因為它是重點 */
+    .highlight-item {
+      border-left: 5px solid #ffca28; /* 金黃色標示 */
+      background: linear-gradient(90deg, rgba(255, 202, 40, 0.05), transparent);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="species.html" class="back-link">← 種類一覧に戻る</a>
+
+    <h1>サワガニ・淡水棲類</h1>
+    <div class="subtitle">Freshwater Crabs / 河川、渓流、湖沼環境</div>
+
+    <div class="species-list">
+
+      <a href="terrathelphusa_kuhli.html" class="species-item highlight-item">
+        <h2>テラテルプサ・クーリ (Terrathelphusa kuhli)</h2>
+        <p>
+          <span style="color: #ffca28;">★ 注目種</span><br>
+          分類：ゲカルキヌス科 (Gecarcinucidae)<br>
+          分布：インドネシア・ジャワ島固有種<br>
+          備考：Ondřej Radosta氏による記録・関連
+        </p>
+      </a>
+
+      <a href="#" class="species-item">
+        <h2>サワガニ (Geothelphusa dehaani)</h2>
+        <p>
+          分類：サワガニ科<br>
+          分布：日本固有種 (本州・四国・九州)<br>
+          備考：清流域の指標生物
+        </p>
+      </a>
+
+      <a href="#" class="species-item">
+        <h2>その他の淡水ガニ</h2>
+        <p>準備中...</p>
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>
