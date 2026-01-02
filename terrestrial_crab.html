@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
+    /* 這裡必須是列表頁的樣式 */
     html, body {
       margin: 0; padding: 0;
       background-image: url('/images/bg.jpg');
@@ -30,6 +31,8 @@
     }
     .back-link:hover { color: #fff; background-color: rgba(0,0,0,0.8); }
     .species-list { list-style: none; padding: 0; }
+    
+    /* 這裡設定列表項目的樣式 */
     .species-item {
       display: block; text-decoration: none; color: #fff;
       padding: 30px; background-color: rgba(0, 0, 0, 0.6);
@@ -48,9 +51,12 @@
 <body>
   <div class="container">
     <a href="https://ybh-commits.github.io/species.html" class="back-link">← 種類一覧に戻る</a>
+
     <h1>陸棲ガニ一覧</h1>
     <div class="subtitle">Land Crabs / 沿岸林・洞窟・内陸部に生息</div>
+
     <div class="species-list">
+
       <a href="#" class="species-item">
         <h2>オオエンジクガニ (Tuerkayana magnum)</h2>
         <p>
@@ -59,6 +65,7 @@
           備考：大型の陸生ガニ、紫色の甲羅が特徴
         </p>
       </a>
+
       <a href="#" class="species-item">
         <h2>ミナミオカガニ (Cardisoma carnifex)</h2>
         <p>
@@ -67,10 +74,12 @@
           備考：海岸林に深い巣穴を掘る
         </p>
       </a>
+
       <a href="#" class="species-item">
         <h2>その他の陸棲ガニ</h2>
         <p>準備中...</p>
       </a>
+
     </div>
   </div>
 </body>
