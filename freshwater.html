@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* 延續高質感的黑底風格 */
     html, body {
       margin: 0;
       padding: 0;
@@ -65,12 +64,13 @@
       padding: 0;
     }
 
+    /* 統一設定：所有選項都是半透明黑底 */
     .species-item {
       display: block;
       text-decoration: none;
       color: #fff;
       padding: 30px;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.6); 
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 8px;
       margin-bottom: 20px;
@@ -79,7 +79,7 @@
     }
 
     .species-item:hover {
-      background-color: rgba(30, 30, 30, 0.8);
+      background-color: rgba(30, 30, 30, 0.9);
       transform: translateY(-5px);
       border-color: #81d4fa;
       box-shadow: 0 10px 20px rgba(0,0,0,0.5);
@@ -99,12 +99,6 @@
       margin-top: 8px;
       line-height: 1.6;
     }
-
-    /* 為庫氏蟹做特別的高亮顯示，因為它是重點 */
-    .highlight-item {
-      border-left: 5px solid #ffca28; /* 金黃色標示 */
-      background: linear-gradient(90deg, rgba(255, 202, 40, 0.05), transparent);
-    }
   </style>
 </head>
 <body>
@@ -116,10 +110,9 @@
 
     <div class="species-list">
 
-      <a href="terrathelphusa_kuhli.html" class="species-item highlight-item">
+      <a href="terrathelphusa_kuhli.html" class="species-item">
         <h2>テラテルプサ・クーリ (Terrathelphusa kuhli)</h2>
         <p>
-          <span style="color: #ffca28;">★ 注目種</span><br>
           分類：ゲカルキヌス科 (Gecarcinucidae)<br>
           分布：インドネシア・ジャワ島固有種<br>
           備考：Ondřej Radosta氏による記録・関連
@@ -132,7 +125,7 @@
           分類：サワガニ科<br>
           分布：日本固有種 (本州・四国・九州)<br>
           備考：清流域の指標生物
-           <p>準備中...</p>
+        </p>
       </a>
 
       <a href="#" class="species-item">
