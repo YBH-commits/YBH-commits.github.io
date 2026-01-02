@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
+    /* 樣式保持原本的高質感黑底風格 */
     html, body {
       margin: 0;
       padding: 0;
@@ -36,17 +37,6 @@
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
-    .category-title {
-      font-size: 24px;
-      color: #81d4fa;
-      margin-top: 60px;
-      margin-bottom: 20px;
-      border-left: 5px solid #81d4fa;
-      padding-left: 15px;
-      background: linear-gradient(90deg, rgba(129, 212, 250, 0.1), transparent);
-      font-weight: 700;
-    }
-
     .back-link {
       display: inline-block;
       margin-bottom: 40px;
@@ -63,41 +53,58 @@
       background-color: rgba(0,0,0,0.8);
     }
 
-    .species-list {
-      list-style: none;
-      padding: 0;
+    .category-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
 
-    .species-item {
+    .category-item {
       display: block;
       text-decoration: none;
       color: #fff;
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 10px;
-      margin-bottom: 20px;
+      padding: 40px;
+      background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(10, 10, 10, 0.9));
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-left: 8px solid #81d4fa; /* 藍色識別條 */
+      border-radius: 8px;
       transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
     }
 
-    .species-item:hover {
-      background-color: rgba(50, 50, 50, 0.8);
-      transform: translateY(-5px);
+    .category-item:hover {
+      transform: translateX(10px); /* 懸停時向右滑動，有層級推進感 */
+      background: linear-gradient(135deg, rgba(50, 50, 50, 0.9), rgba(20, 20, 20, 0.9));
       border-color: #81d4fa;
+      box-shadow: 0 0 20px rgba(129, 212, 250, 0.2);
     }
 
-    .species-item h2 {
-      font-size: 28px;
+    .category-item h2 {
+      font-size: 32px;
       margin: 0 0 10px 0;
-      color: #fff;
-      font-weight: 500;
+      font-weight: 700;
     }
-    
-    .species-item p {
+
+    .category-item p {
       margin: 0;
       font-size: 16px;
-      color: #ccc;
-      margin-top: 5px;
+      color: #aaa;
+    }
+    
+    .arrow {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: #555;
+      transition: 0.3s;
+    }
+    
+    .category-item:hover .arrow {
+      color: #81d4fa;
+      right: 20px;
     }
   </style>
 </head>
@@ -105,61 +112,33 @@
   <div class="container">
     <a href="index.html" class="back-link">← ホームに戻る</a>
 
-    <h1>種類一覧</h1>
+    <h1>種類一覧 (Categories)</h1>
 
-    <div class="category-title">陸棲ガニ</div>
-    
-    <a href="tuerkayana.html" class="species-item">
-      <h2>オオエンジクガニ</h2>
-      <p>陸生 / オカガニ科 / 沿岸部の森林や洞窟に生息</p>
-    </a>
+    <div class="category-list">
 
-    <div class="category-title">サワガニ</div>
+      <a href="land_crab.html" class="category-item">
+        <h2>陸棲ガニ</h2>
+        <p>Land Crabs / 陸生傾向の強いグループ</p>
+        <span class="arrow">▶</span>
+      </a>
 
-    <a href="terrathelphusa_kuhli.html" class="species-item">
-      <h2>テラテルプサ・クーリ</h2>
-      <p>淡水生 / ゲカルキヌス科 / ジャワ島固有種 / Ondřej Radosta氏関連</p>
-    </a>
+      <a href="freshwater.html" class="category-item">
+        <h2>サワガニ (淡水蟹)</h2>
+        <p>Freshwater Crabs / 河川・渓流・湖沼に生息</p>
+        <span class="arrow">▶</span>
+      </a>
 
-    <a href="#" class="species-item">
-      <h2>サワガニ類</h2>
-      <p>淡水生 / サワガニ科 / 山間部の清流域に生息</p>
-    </a>
+      <a href="marine.html" class="category-item">
+        <h2>海産ガニ</h2>
+        <p>Marine Crabs / 海洋に生息するカニ類</p>
+        <span class="arrow">▶</span>
+      </a>
 
-    <div class="category-title">海産ガニ</div>
-
-    <a href="#" class="species-item">
-      <h2>ヨーロッパイチョウガニ</h2>
-      <p>海洋 / イチョウガニ科 / 食用として知られる大型種</p>
-    </a>
-
-    <div class="category-title">エビ類</div>
-
-    <a href="#" class="species-item">
-      <h2>エビ類</h2>
-      <p>淡水・海水生 / テナガエビ、ヌマエビなど</p>
-    </a>
-
-    <div class="category-title">ヤドカリ</div>
-
-    <a href="#" class="species-item">
-      <h2>オカヤドカリ</h2>
-      <p>陸生 / オカヤドカリ科 / 貝殻を背負い海岸林で生活</p>
-    </a>
-
-    <div class="category-title">カブトガニ</div>
-
-    <a href="#" class="species-item">
-      <h2>カブトガニ</h2>
-      <p>海洋 / カブトガニ科 / 干潟に生息する「生きた化石」</p>
-    </a>
-
-    <div class="category-title">その他</div>
-
-    <a href="#" class="species-item">
-      <h2>その他の甲殻類</h2>
-      <p>分類未定 / 詳細データ準備中</p>
-    </a>
+      <a href="others.html" class="category-item">
+        <h2>その他・甲殻類</h2>
+        <p>Others / ヤドカリ・エビ・カブトガニなど</p>
+        <span class="arrow">▶</span>
+      </a>
 
     </div>
   </div>
