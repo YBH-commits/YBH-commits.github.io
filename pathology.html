@@ -2,10 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>病理選択｜Crab Archive</title>
+  <title>病理レポート｜Crab Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     html, body {
       margin: 0;
@@ -22,95 +22,121 @@
     }
 
     .container {
-      padding: 100px 20px;
-      max-width: 800px;
+      padding: 80px 40px;
+      max-width: 900px;
       margin: 0 auto;
-      text-align: center;
     }
 
     h1 {
       font-size: 40px;
-      margin-bottom: 60px;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
-    }
-
-    .menu-list {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .menu-item {
-      display: block;
-      text-decoration: none;
+      font-weight: 700;
+      margin-bottom: 20px;
       color: #fff;
-      padding: 40px;
-      background-color: rgba(0, 0, 0, 0.7); /* 半透明黑底 */
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 15px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
-    .menu-item:hover {
-      background-color: rgba(50, 50, 50, 0.9);
-      transform: translateY(-5px); /* 浮起來 */
-      border-color: #81d4fa;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    }
-
-    .menu-item h2 {
-      font-size: 32px;
-      margin: 0 0 10px 0;
-      color: #81d4fa;
-    }
-
-    .menu-item p {
-      margin: 0;
-      color: #ccc;
-      font-size: 18px;
+    .subtitle {
+      font-size: 16px;
+      color: #ef5350; /* 病理分類統一用紅色強調 */
+      margin-bottom: 60px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 20px;
+      letter-spacing: 0.1em;
     }
 
     .back-link {
       display: inline-block;
-      margin-top: 60px;
+      margin-bottom: 40px;
       color: #ddd;
       text-decoration: none;
       font-size: 16px;
       background-color: rgba(0,0,0,0.5);
-      padding: 10px 25px;
+      padding: 5px 15px;
       border-radius: 20px;
       transition: all 0.3s;
     }
     .back-link:hover {
-      background-color: #fff;
-      color: #000;
+      color: #fff;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .report-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    /* 半透明黑底選項風格 */
+    .report-item {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: all 0.3s;
+    }
+
+    .report-item:hover {
+      background-color: rgba(50, 50, 50, 0.8);
+      transform: translateY(-5px);
+      border-color: #ef5350;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .report-item h2 {
+      font-size: 26px;
+      margin: 0 0 10px 0;
+      color: #fff;
+      font-weight: 500;
+    }
+    
+    .report-item p {
+      margin: 0;
+      font-size: 16px;
+      color: #ccc;
+      margin-top: 5px;
+      line-height: 1.6;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #ef5350;
+      color: #fff;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>病理レポート選択</h1>
-    <p style="margin-bottom: 50px;">閲覧したいカテゴリを選択してください。<br>Please select a category.</p>
+    <a href="index.html" class="back-link">← ホームに戻る</a>
 
-    <div class="menu-list">
-      
-      <a href="land_crab.html" class="menu-item">
-        <h2>陸棲甲殻類</h2>
-        <p>Land Crabs / Terrestrial Species</p>
-        <p style="font-size: 14px; margin-top: 10px; color: #888;">オカガニ、オカヤドカリ、バンパイアクラブ等</p>
+    <h1>病理レポート｜疾病と治療</h1>
+    <div class="subtitle">Pathology & Treatment / 臨床観察と生理学的研究</div>
+
+    <div class="report-list">
+
+      <a href="magnum_pathology.html" class="report-item">
+        <span class="tag">Physiology</span>
+        <h2>オオエンジクガニ脱皮生理研究報告</h2>
+        <p>
+          Tuerkayana magnum における脱皮メカニズムの深度分析。<br>
+          内分泌系の拮抗作用、気流体静力学骨格、および資源回収戦略の検討。
+        </p>
       </a>
 
-      <a href="water_crab.html" class="menu-item">
-        <h2>サワガニ・淡水蟹</h2>
-        <p>Geothelphusa / Freshwater Crabs</p>
-        <p style="font-size: 14px; margin-top: 10px; color: #888;">サワガニ属およびその他の淡水生種</p>
+      <a href="#" class="report-item">
+        <span class="tag">Status</span>
+        <h2>その他の病理研究</h2>
+        <p>データ準備中...</p>
       </a>
 
     </div>
-
-    <a href="index.html" class="back-link">← Return to Home</a>
   </div>
 </body>
 </html>
