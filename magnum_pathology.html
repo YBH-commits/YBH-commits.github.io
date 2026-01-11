@@ -2,12 +2,12 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>オオエンジクガニ脱皮生理研究｜Crab Archive</title>
+  <title>脱皮生理研究｜Crab Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* 基礎設定 - 延續暗黑專業風格 */
+    /* 完全使用你提供的 land_crab.html 樣式表 */
     html, body {
       margin: 0;
       padding: 0;
@@ -16,198 +16,236 @@
       background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
-      background-color: #1a1a1a;
       font-family: 'Noto Sans JP', sans-serif;
-      color: #e0e0e0;
-      font-size: 16px;
+      color: #fff;
+      font-size: 18px;
       line-height: 1.8;
     }
 
     .container {
-      padding: 60px 20px;
-      max-width: 850px;
+      padding: 80px 20px;
+      max-width: 900px;
       margin: 0 auto;
-      background: rgba(0, 0, 0, 0.85);
-      box-shadow: 0 0 50px rgba(0,0,0,0.9);
-      border: 1px solid #333;
     }
 
-    /* 導航 */
+    .content-box {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 60px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
     .back-link {
       display: inline-block;
-      margin-bottom: 30px;
-      color: #ef5350; /* 病理分類使用紅色系強調 */
+      margin-bottom: 40px;
+      color: #ddd;
       text-decoration: none;
-      font-size: 14px;
-      border: 1px solid #ef5350;
-      padding: 5px 15px;
+      font-size: 16px;
+      background-color: rgba(255,255,255,0.1);
+      padding: 8px 20px;
       border-radius: 20px;
       transition: all 0.3s;
     }
     .back-link:hover {
-      background-color: #ef5350;
-      color: #fff;
-    }
-
-    header {
-      border-bottom: 2px solid #ef5350;
-      padding-bottom: 20px;
-      margin-bottom: 40px;
+      background-color: #fff;
+      color: #000;
     }
 
     h1 {
-      font-size: 30px;
-      font-weight: 700;
-      margin: 0;
-      color: #fff;
-    }
-
-    .scientific-name {
-      font-style: italic;
-      color: #ffca28;
-      font-size: 20px;
-      display: block;
-      margin-top: 10px;
-    }
-
-    section {
-      margin-bottom: 50px;
+      font-size: 36px;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+      line-height: 1.4;
     }
 
     h2 {
-      font-size: 22px;
-      color: #ef5350;
-      border-left: 5px solid #ef5350;
-      padding-left: 12px;
-      margin-top: 40px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      color: #81d4fa;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      border-left: 5px solid #81d4fa;
+      padding-left: 15px;
     }
 
     h3 {
-      font-size: 18px;
-      color: #ddd;
-      margin-top: 25px;
-      font-weight: 700;
+      font-size: 24px;
+      color: #b3e5fc;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin-top: 30px;
+      color: #e1f5fe;
+      text-decoration: underline;
+      font-weight: bold;
     }
 
     p {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       text-align: justify;
     }
 
-    .info-table {
+    .abstract {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-left: 4px solid #fff;
+      margin-bottom: 50px;
+      font-style: italic;
+      color: #eee;
+    }
+
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+    strong {
+      color: #ffcc80;
+    }
+
+    table {
       width: 100%;
       border-collapse: collapse;
-      margin: 25px 0;
-      background: rgba(255, 255, 255, 0.05);
+      margin: 40px 0;
+      font-size: 16px;
     }
-
-    .info-table th, .info-table td {
-      border: 1px solid #444;
-      padding: 12px;
-    }
-
-    .info-table th {
-      background-color: rgba(239, 83, 80, 0.1);
-      color: #ef5350;
+    th, td {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 15px;
       text-align: left;
-      width: 30%;
+      vertical-align: top;
     }
-
-    strong { color: #fff; }
-
-    .footer-note {
-      margin-top: 60px;
-      font-size: 13px;
-      color: #666;
-      text-align: right;
+    th {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.05);
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <a href="pathology.html" class="back-link">← 病理・治療一覧に戻る</a>
+    <div class="content-box">
+      <a href="pathology.html" class="back-link">← Return to Pathology List</a>
 
-    <header>
-      <h1>オオエンジクガニ（Tuerkayana magnum）における脱皮生理、行動表徵、および周期進歩に関する深度研究報告</h1>
-      <span class="scientific-name">Tuerkayana magnum (formerly Discoplax magnum)</span>
-    </header>
+      <h1>オオエンジクガニの脱皮生理学と適応進化</h1>
+      <p style="font-size: 20px; margin-bottom: 40px; color: #ccc;">Tuerkayana magnum における脱皮メカニズム、ホルモン制御および気流体静力学に関する深度研究報告</p>
 
-    <section>
+      <div class="abstract">
+        <strong>要旨</strong><br>
+        本報告書は、2018年に再定義された <em>Tuerkayana</em> 属、特に大型陸棲種であるオオエンジクガニ（<em>Tuerkayana magnum</em>）の脱皮（Ecdysis）プロセスにおける生理学的特異性を包括的に解析するものである。陸上環境という極限条件下での脱皮は、水生種とは異なる高度な内分泌制御（X器官-Y器官軸）、R指数による不可逆的コミットメント、および重力に対抗するための「気流体静力学骨格（Pneumo-hydrostatic Skeleton）」の確立を必要とする。本研究では、脱皮前・中・後の各ステージにおける行動的・形態的マーカー（眼球混濁、封鎖行動）を定義し、致死的な脱皮不全を防ぐための環境要因（湿度、ミネラル回収）を考察する。これにより、本種の飼育下における生存率向上および生理学的理解の深化を目指す。
+      </div>
+
       <h2>1. 陸棲ガニの分類学的変遷と Tuerkayana 属の系統的地位</h2>
-      <p>
-        地蟹科（Gecarcinidae）は、陸上環境への適応過程において生理構造に顕著な変化を遂げたグループである。2018年の系統再検討により、旧 <em>Cardisoma</em> 属および <em>Discoplax</em> 属の一部から <strong>Tuerkayana 属</strong> が独立した。本属には <em>T. magnum</em> のほか、<em>T. hirtipes</em>（ミナミオカガニ）や <em>T. celeste</em>（クリスマス島ブルーグラブ）が含まれる。
-      </p>
-      <p>
-        オオエンジクガニ（<em>T. magnum</em>）は、極めて滑らかで膨張した背甲構造を持ち、これが内部の鰓室容積を拡大させ、乾燥耐性と効率的な空気呼吸を可能にしている。
-      </p>
-    </section>
+      <p>地蟹科（Gecarcinidae）は、短尾下目（Brachyura）の中でも陸上環境への適応において極めて特異な進化的地位を占める。かつて多くの大型陸棲ガニは <em>Cardisoma</em> 属や <em>Discoplax</em> 属に一括されていたが、2018年の分子系統解析により、<strong>Tuerkayana 属</strong>が独立した系統として再定義された。</p>
 
-    <section>
-      <h2>2. 脱皮生理の調節メカニズム：内分泌系と環境信号</h2>
-      <h3>ホルモン拮抗作用</h3>
-      <p>
-        脱皮（Ecdysis）は内分泌系によって厳密に制御されている。眼柄内の <strong>X器官 (X-organ)</strong> は脱皮抑制ホルモン（MIH）を放出し、通常時の脱皮を阻止する。環境シグナルによりMIHが低下すると、頭胸部の <strong>Y器官 (Y-organ)</strong> がエグジステロイドを分泌し、脱皮プロセスが開始される。
-      </p>
-      <h3>R指数 (R-index) による評価</h3>
-      <p>
-        再生肢芽の長さと背甲幅の比率を示す <strong>R指数</strong> が16を超えると、個体は脱皮コミットメント期に入り、プロセスの停止は不可能となる。
-      </p>
-    </section>
-
-    <section>
-      <h2>3. 脱皮前期 (Proecdysis) の兆候と行動の変化</h2>
-      <p><strong>外部的兆候：</strong></p>
+      <h3>Tuerkayana 属の構成種</h3>
       <ul>
-        <li><strong>眼球の混濁 (Cloudy Eyes)：</strong>角膜の表皮分離（Apolysis）により目が乳白色に濁る。</li>
-        <li><strong>脱皮嚢 (Molt Sac) の形成：</strong>体液を蓄積した液嚢が出現し、脱皮時の急速な膨張に備える。</li>
-        <li><strong>背甲の軟化：</strong>カルシウムが旧殼から再吸収（Resorption）され、殼が紙のような質感になる。</li>
+        <li><em>Tuerkayana rotundum</em>（オカガニ）</li>
+        <li><em>Tuerkayana hirtipes</em>（ミナミオカガニ）</li>
+        <li><em>Tuerkayana celeste</em>（ブルーグラブ）</li>
+        <li><em>Tuerkayana latens</em>（インニツオカガニ）</li>
+        <li><strong><em>Tuerkayana magnum</em>（オオエンジクガニ）</strong>：本種の背甲は極めて滑らかで、側縁部の膨らみが強い。この膨張した背甲構造は、空気中での呼吸効率を最大化するための巨大な鰓室容積を確保するための進化である。</li>
       </ul>
-      <p><strong>行動の変化：</strong></p>
-      <ul>
-        <li><strong>強制的絶食：</strong>脱皮の6〜10日前から完全に摂食を停止する。</li>
-        <li><strong>封鎖行動 (Plug behavior)：</strong>深い穴を掘り、入り口を泥で封鎖して高湿度と安全を確保する。</li>
-      </ul>
-    </section>
 
-    <section>
+      <h2>2. 脱皮生理の調節メカニズム：内分泌系と環境シグナル</h2>
+      <p>脱皮（Ecdysis）は、キチン質とタンパク質、そして高濃度のカルシウムから成る外骨格を更新する生命維持に不可欠なプロセスである。</p>
+
+      <h3>内分泌制御の拮抗作用</h3>
+      <ul>
+        <li><strong>X器官 (X-organ)：</strong> 眼柄内に位置し、脱皮抑制ホルモン（MIH）を合成・放出する。通常時は脱皮を抑制している。</li>
+        <li><strong>Y器官 (Y-organ)：</strong> 環境シグナルによりMIHの血リンパ濃度が低下すると、エグジステロイド（蛻皮ホルモン）を分泌し、脱皮前期（Proecdysis）を誘導する。mTORC1経路の活性化がこのスイッチに関与している。</li>
+      </ul>
+
+      <h3>分子マーカーとR指数</h3>
+      <p><strong>R指数 (R-index)</strong> とは、再生肢芽の長さと背甲幅の比率である。この数値が「16」を超えると「脱皮コミットメント期」に入り、外部環境が悪化しても脱皮プロセスは不可逆的に進行する。この段階での干渉は致命的となる。</p>
+
+      <h2>3. 脱皮前期 (Proecdysis) の兆候と行動的適応</h2>
+      <p>脱皮の数週間前から、カニは劇的な生理的・行動的変化を示す。</p>
+
+      <h3>形態的兆候</h3>
+      <ul>
+        <li><strong>眼球の混濁 (Cloudy Eyes)：</strong> 旧殻の下で新角膜が形成される際、表皮分離（Apolysis）によって光学的な透明度が失われ、眼が乳白色に濁る。最も信頼できる指標である。</li>
+        <li><strong>脱皮嚢 (Molt Sac)：</strong> 腹部基部等に水分を蓄積した液嚢が出現する。これは脱皮瞬間に体積を急激に増大させるためのリザーバー（貯水タンク）である。</li>
+        <li><strong>背甲の軟化：</strong> カルシウムが旧殻から血リンパへ再吸収され、背甲後縁と腹部の接合線（弱線）が弛緩し、殻が「紙」のような質感になる。</li>
+      </ul>
+
+      <h3>行動的兆候</h3>
+      <ul>
+        <li><strong>強制的絶食：</strong> 脱皮の6〜10日前から摂食を完全に停止する。消化管を空にする必要があるためである。</li>
+        <li><strong>封鎖行動 (Plug behavior)：</strong> 深い巣穴を掘り、入り口を泥で完全に封鎖する。これにより外敵を遮断し、高湿度（ほぼ100%）かつ暗黒の環境下でホルモン分泌の安定を図る。</li>
+      </ul>
+
       <h2>4. 脱皮期 (Ecdysis) の物理力学：気流体静力学骨格</h2>
-      <p>
-        血リンパ圧の急上昇により背部弱線が破裂し、旧殼から脱出する。特に巨大なハサミを持つ本種にとって、筋肉組織から体液を排出して一時的に萎縮させるプロセスは生存を左右する難所である。
-      </p>
-      <p>
-        陸上では水の浮力を利用できないため、吸入した空気と体液の圧力による <strong>気流体静力学骨格 (Pneumo-hydrostatic Skeleton)</strong> で自重を支える。この際の内部圧力は水生種の1.5〜2倍に達する。
-      </p>
-    </section>
+      <p>陸上での脱皮は、水の浮力を利用できないため、物理的に極めて困難な作業である。</p>
 
-    <section>
-      <h2>5. 脱皮後期 (Metecdysis) とミネラル回収</h2>
-      <p>
-        脱皮直後、個体は自らの <strong>旧殻 (Exuvia)</strong> を摂食する。これは高純度のカルシウムとキチンを回収し、新殼の石灰化を加速させるための必須行動である。硬化は自衛に不可欠なハサミの先端や口器から優先的に開始される。
-      </p>
-    </section>
+      <h3>脱出シーケンス</h3>
+      <p>血リンパ圧の急上昇により背部弱線が破裂し、頭胸部が旧殻から後方へ抽出される。特に<strong>大鋏の抽出</strong>は最大の難関であり、巨大なハサミの筋肉組織から体液を排出し、筋肉を糸状に一時的に萎縮させることで、狭窄した関節部を通過させる。</p>
 
-    <section>
-      <h2>6. 脱皮期間の推定対照表</h2>
-      <table class="info-table">
-        <tr><th>ライフステージ</th><th>脱皮前期</th><th>脱皮瞬間</th><th>硬化期間</th><th>頻度</th></tr>
-        <tr><td>幼蟹 (CW < 20mm)</td><td>7-14日</td><td>15-45分</td><td>2-4日</td><td>2-3ヶ月/回</td></tr>
-        <tr><td>亜成蟹 (20-50mm)</td><td>21-45日</td><td>1-2時間</td><td>7-14日</td><td>年2-3回</td></tr>
-        <tr><td>大型成蟹 (> 80mm)</td><td>2-4ヶ月</td><td>3-6時間</td><td>20-45日</td><td>年1回以下</td></tr>
+      <h3>気流体静力学骨格 (Pneumo-hydrostatic Skeleton)</h3>
+      <p>脱皮直後の軟殻ガニは、外骨格による支持を失う。代わりに、吸入した空気と体液の圧力によって風船のように体を膨らませ、自重を支える。この際、血リンパ圧は水生種の1.5〜2倍に達する。この時期に物理的衝撃を与えると、体液圧のバランスが崩れ、内臓破裂や変形を招く。</p>
+
+      <h2>5. 脱皮後期 (Metecdysis) とミネラル回収戦略</h2>
+      <p>新殻の硬化（石灰化）には多量のカルシウムが必要であるが、陸上環境では海水からイオンを摂取できない。</p>
+
+      <h3>旧殻の摂食 (Exuvia Consumption)</h3>
+      <p>脱皮後、カニは自らの旧殻を摂食する。これは高純度のカルシウムとキチンを効率的に回収する必須行動である。胃石（Gastroliths）として体内に貯蔵していたカルシウムと合わせ、急速な硬化を促す。</p>
+
+      <h3>硬化の優先順位</h3>
+      <p>生存戦略として、摂食と防御を優先するため、ハサミの尖端（指節）や口器から石灰化が開始される。</p>
+
+      <h2>6. 脱皮周期推定対照表</h2>
+      <p>脱皮頻度はサイズ（甲幅：CW）に強く依存する。</p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>ライフステージ</th>
+            <th>脱皮前期 (準備期間)</th>
+            <th>脱皮の瞬間 (物理的抽出)</th>
+            <th>硬化期間 (軟殻期)</th>
+            <th>推定頻度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>幼蟹</strong> (CW < 20mm)</td>
+            <td>7 - 14 日</td>
+            <td>15 - 45 分</td>
+            <td>2 - 4 日</td>
+            <td>2-3ヶ月に1回</td>
+          </tr>
+          <tr>
+            <td><strong>亜成蟹</strong> (CW 20-50mm)</td>
+            <td>21 - 45 日</td>
+            <td>1 - 2 時間</td>
+            <td>7 - 14 日</td>
+            <td>年に2-3回</td>
+          </tr>
+          <tr>
+            <td><strong>大型成蟹</strong> (CW > 80mm)</td>
+            <td>2 - 4 ヶ月</td>
+            <td>3 - 6 時間</td>
+            <td>20 - 45 日</td>
+            <td>年に1回以下</td>
+          </tr>
+        </tbody>
       </table>
-    </section>
 
-    <section>
-      <h2>7. 陸棲ガニと水生カニの脱皮生理の比較</h2>
-      <p>
-        陸棲ガニの新殼（キューティクル）はタンパク質架橋の密度が高く、陸上での重力負荷に耐える構造を持つ。また、環境からのミネラル摂取が困難なため、旧殼のカルシウムの最大60%を再吸収し、<strong>胃石 (Gastroliths)</strong> として貯蔵する高度な資源回収戦略を確立している。
-      </p>
-    </section>
+      <h2>7. 結論</h2>
+      <p><em>Tuerkayana magnum</em> の脱皮は、単なる成長プロセスではなく、陸上生活への適応の極致である。R指数のモニタリング、湿度管理、および旧殻摂取の保証は、本種を飼育管理する上で不可欠な要素である。気流体静力学骨格の脆弱性を理解し、脱皮前後における干渉を徹底して避けることが、生存率を最大化する鍵となる。</p>
 
-    <div class="footer-note">
-      Pathology Research Division, Crab Archive.
     </div>
   </div>
+
 </body>
 </html>
