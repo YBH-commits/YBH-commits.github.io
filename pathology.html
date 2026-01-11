@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
+    /* 核心樣式：保持與種類一覧一致的大型按鈕風格 */
     html, body {
       margin: 0;
       padding: 0;
@@ -30,18 +31,10 @@
     h1 {
       font-size: 40px;
       font-weight: 700;
-      margin-bottom: 20px;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    }
-
-    .subtitle {
-      font-size: 16px;
-      color: #ef5350; /* 病理分類統一用紅色強調 */
       margin-bottom: 60px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       padding-bottom: 20px;
-      letter-spacing: 0.1em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
     .back-link {
@@ -60,83 +53,62 @@
       background-color: rgba(0,0,0,0.8);
     }
 
-    .report-list {
-      list-style: none;
-      padding: 0;
+    .category-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
 
-    /* 半透明黑底選項風格 */
-    .report-item {
+    /* 大按鈕樣式：半透明黑底、藍邊 */
+    .category-item {
       display: block;
       text-decoration: none;
       color: #fff;
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(10, 10, 10, 0.9));
       border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
-      margin-bottom: 20px;
+      border-left: 8px solid #81d4fa;
+      border-radius: 8px;
       transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
     }
 
-    .report-item:hover {
-      background-color: rgba(50, 50, 50, 0.8);
-      transform: translateY(-5px);
-      border-color: #ef5350;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    .category-item:hover {
+      transform: translateX(10px);
+      background: linear-gradient(135deg, rgba(50, 50, 50, 0.9), rgba(20, 20, 20, 0.9));
+      border-color: #81d4fa;
+      box-shadow: 0 0 20px rgba(129, 212, 250, 0.2);
     }
 
-    .report-item h2 {
-      font-size: 26px;
+    .category-item h2 {
+      font-size: 32px;
       margin: 0 0 10px 0;
-      color: #fff;
-      font-weight: 500;
+      font-weight: 700;
     }
-    
-    .report-item p {
+
+    .category-item p {
       margin: 0;
       font-size: 16px;
-      color: #ccc;
-      margin-top: 5px;
-      line-height: 1.6;
+      color: #aaa;
     }
-
-    .tag {
-      display: inline-block;
-      background-color: #ef5350;
-      color: #fff;
-      font-size: 12px;
-      padding: 2px 8px;
-      border-radius: 4px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
+    
+    .arrow {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: #555;
+      transition: 0.3s;
+    }
+    
+    .category-item:hover .arrow {
+      color: #81d4fa;
+      right: 20px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <a href="index.html" class="back-link">← ホームに戻る</a>
-
-    <h1>病理レポート｜疾病と治療</h1>
-    <div class="subtitle">Pathology & Treatment / 臨床観察と生理学的研究</div>
-
-    <div class="report-list">
-
-      <a href="magnum_pathology.html" class="report-item">
-        <span class="tag">Physiology</span>
-        <h2>オオエンジクガニ脱皮生理研究報告</h2>
-        <p>
-          Tuerkayana magnum における脱皮メカニズムの深度分析。<br>
-          内分泌系の拮抗作用、気流体静力学骨格、および資源回収戦略の検討。
-        </p>
-      </a>
-
-      <a href="#" class="report-item">
-        <span class="tag">Status</span>
-        <h2>その他の病理研究</h2>
-        <p>データ準備中...</p>
-      </a>
-
-    </div>
-  </div>
-</body>
-</html>
+    <a href="index.html
